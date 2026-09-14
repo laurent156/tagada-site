@@ -330,6 +330,8 @@ body.menu-open{ overflow:hidden; }
 .lang-switch a{ transition:color .3s var(--ease); }
 .lang-switch a:hover{ color:var(--ink); }
 .lang-switch a.is-current{ color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
+.menu-foot a.is-current{ color:var(--on-dark); text-decoration:underline; text-underline-offset:3px; }
+@media (max-width:640px){ .navbar .lang-switch{ display:none; } }
 </style>
 </head>
 <body>
@@ -363,6 +365,7 @@ body.menu-open{ overflow:hidden; }
       <a href="mailto:info@tagada.be">info@tagada.be</a>
       <a href="tel:+3225343404">+32 2 534 34 04</a>
     </div>
+    <div class="menu-foot" style="margin-top:16px;"><a href="https://laurent156.github.io/tagada-site/mentions-legales.html" class="is-current">FR</a><a href="https://laurent156.github.io/tagada-site/en/mentions-legales.html">EN</a><a href="https://laurent156.github.io/tagada-site/nl/mentions-legales.html">NL</a></div>
   </div>
 </div>
 
