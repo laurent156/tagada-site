@@ -326,12 +326,7 @@ body.menu-open{ overflow:hidden; }
 .legal-body .btn-outline{ margin-top:8px; }
 
 
-.lang-switch{ display:flex; align-items:center; gap:10px; font-family:var(--font-body); font-weight:600; font-size:13px; color:var(--ink-35); }
-.lang-switch a{ transition:color .3s var(--ease); }
-.lang-switch a:hover{ color:var(--ink); }
-.lang-switch a.is-current{ color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
 .menu-foot a.is-current{ color:var(--on-dark); text-decoration:underline; text-underline-offset:3px; }
-@media (max-width:640px){ .navbar .lang-switch{ display:none; } }
 </style>
 </head>
 <body>
@@ -339,7 +334,6 @@ body.menu-open{ overflow:hidden; }
   <div class="navbar-inner">
     <div class="brand"><img class="mark" src="../Images/site/logo-tagada-mark.png" alt="">Tagada</div>
     <div class="nav-actions">
-      <div class="lang-switch"><a href="https://laurent156.github.io/tagada-site/mentions-legales.html">FR</a><a href="https://laurent156.github.io/tagada-site/en/mentions-legales.html" class="is-current">EN</a><a href="https://laurent156.github.io/tagada-site/nl/mentions-legales.html">NL</a></div>
       <button class="menu-trigger" onclick="toggleMenu(true)">
         <span class="bars"><span></span><span></span><span></span></span>
         Menu

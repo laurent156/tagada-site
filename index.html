@@ -388,6 +388,7 @@ body.menu-open{ overflow:hidden; }
 .rse-grid{ margin-top:48px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .rse-card{ background:var(--surface); border-radius:var(--radius-lg); padding:32px 28px; display:flex; flex-direction:column; gap:14px; }
 .rse-card .stat{ font-family:var(--font-display); font-weight:500; font-size:34px; color:var(--accent-deep); letter-spacing:-.02em; }
+.rse-card .stat.stat-symbol{ font-size:48px; line-height:1; }
 .rse-card h3{ font-family:var(--font-body); font-weight:600; font-size:16px; }
 .rse-card p{ font-size:14.5px; line-height:1.55; color:var(--ink-60); }
 @media (max-width:900px){ .rse-grid{ grid-template-columns:1fr; } }
@@ -398,12 +399,7 @@ body.menu-open{ overflow:hidden; }
 .filter-btn:hover{ border-color:var(--ink-35); color:var(--ink); }
 .filter-btn.is-active{ background:var(--ink); border-color:var(--ink); color:var(--bg); }
 .p-card.is-hidden{ display:none; }
-.lang-switch{ display:flex; align-items:center; gap:10px; font-family:var(--font-body); font-weight:600; font-size:13px; color:var(--ink-35); }
-.lang-switch a{ transition:color .3s var(--ease); }
-.lang-switch a:hover{ color:var(--ink); }
-.lang-switch a.is-current{ color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
 .menu-foot a.is-current{ color:var(--on-dark); text-decoration:underline; text-underline-offset:3px; }
-@media (max-width:640px){ .navbar .lang-switch{ display:none; } }
 </style>
 </head>
 <body>
@@ -411,7 +407,6 @@ body.menu-open{ overflow:hidden; }
   <div class="navbar-inner">
     <div class="brand"><img class="mark" src="Images/site/logo-tagada-mark.png" alt="">Tagada</div>
     <div class="nav-actions">
-      <div class="lang-switch"><a href="https://laurent156.github.io/tagada-site/" class="is-current">FR</a><a href="https://laurent156.github.io/tagada-site/en/">EN</a><a href="https://laurent156.github.io/tagada-site/nl/">NL</a></div>
       <button class="menu-trigger" onclick="toggleMenu(true)">
         <span class="bars"><span></span><span></span><span></span></span>
         Menu
@@ -535,7 +530,7 @@ body.menu-open{ overflow:hidden; }
         <p>Toutes nos chutes d'atelier ainsi que les éléments récupérés en fin de vie sont réintégrés dans des filières belges locales de recyclage circulaire.</p>
       </div>
       <div class="rse-card reveal-io">
-        <span class="stat">&#8734;</span>
+        <span class="stat stat-symbol">&#8734;</span>
         <h3>Conception durable</h3>
         <p>Nous conseillons dès l'étude technique la création de structures 3D modulables et réutilisables sur plusieurs campagnes.</p>
       </div>
