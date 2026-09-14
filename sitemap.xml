@@ -1,27 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://laurent156.github.io/tagada-site/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/"/>
   </url>
+  <url>
+    <loc>https://laurent156.github.io/tagada-site/en/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/"/>
+  </url>
+  <url>
+    <loc>https://laurent156.github.io/tagada-site/nl/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/"/>
+  </url>
+
   <url>
     <loc>https://laurent156.github.io/tagada-site/mentions-legales.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/mentions-legales.html"/>
   </url>
+  <url>
+    <loc>https://laurent156.github.io/tagada-site/en/mentions-legales.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/mentions-legales.html"/>
+  </url>
+  <url>
+    <loc>https://laurent156.github.io/tagada-site/nl/mentions-legales.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/mentions-legales.html"/>
+  </url>
+
   <url>
     <loc>https://laurent156.github.io/tagada-site/confidentialite.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/confidentialite.html"/>
   </url>
   <url>
+    <loc>https://laurent156.github.io/tagada-site/en/confidentialite.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/confidentialite.html"/>
+  </url>
+  <url>
+    <loc>https://laurent156.github.io/tagada-site/nl/confidentialite.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/confidentialite.html"/>
+  </url>
+
+  <url>
     <loc>https://laurent156.github.io/tagada-site/cookies.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/cookies.html"/>
+  </url>
+  <url>
+    <loc>https://laurent156.github.io/tagada-site/en/cookies.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/cookies.html"/>
+  </url>
+  <url>
+    <loc>https://laurent156.github.io/tagada-site/nl/cookies.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://laurent156.github.io/tagada-site/cookies.html"/>
   </url>
 </urlset>
