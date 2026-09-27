@@ -257,10 +257,13 @@ body.menu-open{ overflow:hidden; }
 /* ---------- Dark section base ---------- */
 .section-dark{ background:var(--ink); color:var(--on-dark); }
 .section-gray{ background:var(--gray); }
+.section-red{ background:var(--accent); color:var(--on-dark); }
+.section-red .eyebrow{ color:var(--on-dark); }
+.section-red .eyebrow::before{ background:var(--on-dark); }
 
 /* ---------- Why / Tabs ---------- */
 .why-grid{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
-.why-media{ position:relative; border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:1/1; }
+.why-media{ position:relative; border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:3/4; }
 .why-media img{ width:100%; height:100%; object-fit:cover; }
 .why-h2{ font-size:clamp(30px,3.4vw,42px); line-height:1.05; letter-spacing:-.02em; max-width:14ch; text-wrap:balance; }
 .why-text{ margin-top:20px; font-size:18px; line-height:1.55; color:var(--on-dark-60); font-weight:500; max-width:52ch; }
@@ -312,13 +315,13 @@ body.menu-open{ overflow:hidden; }
 .accordion2.is-active .fill.open-fill{ height:100%; }
 .accordion2 .head{ position:relative; z-index:3; display:flex; gap:20px; align-items:center; padding:22px 26px; }
 .accordion2 .head p{ flex:1; font-family:var(--font-body); font-weight:600; font-size:18px; color:var(--on-dark); transition:color .4s var(--ease); }
-.accordion2.is-active .head p, .accordion2:hover .head p{ color:var(--ink); }
+.accordion2.is-active .head p, .accordion2:hover .head p{ color:var(--on-dark); }
 .accordion2 .icon{ width:32px; height:32px; border-radius:50%; border:1px solid var(--on-dark-15); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:18px; line-height:1; color:var(--on-dark); transition:transform .7s var(--ease), color .4s var(--ease), border-color .4s var(--ease); flex-shrink:0; }
 .accordion2.is-active .icon{ transform:rotate(45deg); }
-.accordion2.is-active .icon, .accordion2:hover .icon{ color:var(--ink); border-color:var(--ink-35); }
+.accordion2.is-active .icon, .accordion2:hover .icon{ color:var(--on-dark); border-color:var(--on-dark); }
 .accordion2 .body{ position:relative; z-index:3; max-height:0; overflow:hidden; transition:max-height .7s var(--ease); }
 .accordion2.is-active .body{ max-height:160px; }
-.accordion2 .body p{ margin:0; padding:0 26px 22px; font-size:15px; line-height:1.6; max-width:64ch; color:var(--ink); }
+.accordion2 .body p{ margin:0; padding:0 26px 22px; font-size:15px; line-height:1.6; max-width:64ch; color:var(--on-dark); }
 .faq-more{ margin-top:56px; max-width:520px; }
 .faq-more h3{ font-size:26px; letter-spacing:-.01em; }
 .faq-more p{ margin-top:10px; font-size:16px; color:var(--on-dark-60); }
@@ -387,8 +390,8 @@ body.menu-open{ overflow:hidden; }
 /* ---------- RSE / engagements section ---------- */
 .rse-grid{ margin-top:48px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .rse-card{ background:var(--surface); border-radius:var(--radius-lg); padding:32px 28px; display:flex; flex-direction:column; gap:14px; }
-.rse-card .stat{ font-family:var(--font-display); font-weight:500; font-size:34px; color:var(--accent-deep); letter-spacing:-.02em; }
-.rse-card .stat.stat-symbol{ font-size:48px; line-height:1; }
+.rse-card .stat{ font-family:var(--font-display); font-weight:500; font-size:46px; color:var(--accent-deep); letter-spacing:-.02em; }
+.rse-card .stat.stat-symbol{ font-size:62px; line-height:1; }
 .rse-card h3{ font-family:var(--font-body); font-weight:600; font-size:16px; }
 .rse-card p{ font-size:14.5px; line-height:1.55; color:var(--ink-60); }
 @media (max-width:900px){ .rse-grid{ grid-template-columns:1fr; } }
@@ -439,7 +442,7 @@ body.menu-open{ overflow:hidden; }
 <header class="hero">
   <div class="hero-inner">
     <h1 class="reveal reveal-1">Découpe de polystyrène pour logos, enseignes et lettrages à Bruxelles</h1>
-    <p class="reveal reveal-2">Porté par 30 ans d'expertise technique, Tagada conseille, façonne et fabrique vos éléments 3D sur-mesure pour les agences de publicité, le retail et l'événementiel.</p>
+    <p class="reveal reveal-2">Porté par 30 ans d'expertise technique, Tagada façonne vos enseignes, décors et éléments 3D sur-mesure en polystyrène, pour les agences de publicité, le retail et l'événementiel.</p>
     <div class="hero-actions reveal reveal-3">
       <a href="#portfolio" class="btn-secondary">Voir nos réalisations</a>
       <a href="#contact" class="btn-primary">Demander une étude technique / devis
@@ -512,7 +515,7 @@ body.menu-open{ overflow:hidden; }
   </div>
 </section>
 
-<section class="section-gray" id="rse">
+<section class="section-red" id="rse">
   <div class="wrap">
     <div class="section-head" data-reveal-group>
       <div class="eyebrow reveal-io">Engagements</div>
