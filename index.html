@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#FF7A00">
+<meta name="theme-color" content="#E0192E">
 <link rel="alternate" hreflang="fr" href="https://laurent156.github.io/tagada-site/">
 <link rel="alternate" hreflang="en" href="https://laurent156.github.io/tagada-site/en/">
 <link rel="alternate" hreflang="nl" href="https://laurent156.github.io/tagada-site/nl/">
@@ -126,8 +126,8 @@
   --ink-35: rgba(22,14,8,.35);
   --ink-15: rgba(22,14,8,.15);
   --line: #E3E0DE;
-  --accent: #FF7A00;
-  --accent-deep: #C35E00;
+  --accent: #E0192E;
+  --accent-deep: #A81323;
   --on-dark: #F4F1ED;
   --on-dark-60: rgba(244,241,237,.6);
   --on-dark-15: rgba(244,241,237,.15);
@@ -171,7 +171,7 @@ section{ padding:112px 0; }
 .navbar{ position:fixed; top:0; left:0; right:0; z-index:500; background:var(--bg); border-bottom:1px solid var(--line); transition:border-color .3s; }
 .navbar-inner{ max-width:1280px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between; }
 .brand{ display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:500; font-size:20px; letter-spacing:-.02em; }
-.brand .mark{ width:22px; height:30px; object-fit:contain; display:block; }
+.brand .mark{ width:auto; height:40px; object-fit:contain; display:block; }
 .nav-actions{ display:flex; align-items:center; gap:24px; }
 .menu-trigger{ display:flex; align-items:center; gap:10px; background:none; border:none; cursor:pointer; font-family:var(--font-display); font-weight:500; font-size:15px; color:var(--ink); padding:0; }
 .menu-trigger .bars{ width:22px; height:14px; position:relative; }
@@ -405,7 +405,7 @@ body.menu-open{ overflow:hidden; }
 <body>
 <nav class="navbar">
   <div class="navbar-inner">
-    <div class="brand"><img class="mark" src="Images/site/logo-tagada-mark.png" alt="">Tagada</div>
+    <div class="brand"><img class="mark" src="Images/site/logo-tagada-red.png" alt="Tagada"></div>
     <div class="nav-actions">
       <button class="menu-trigger" onclick="toggleMenu(true)">
         <span class="bars"><span></span><span></span><span></span></span>
@@ -438,7 +438,7 @@ body.menu-open{ overflow:hidden; }
 
 <header class="hero">
   <div class="hero-inner">
-    <h1 class="reveal reveal-1">Votre atelier de fabrication de logos 3D, enseignes et décors à Bruxelles</h1>
+    <h1 class="reveal reveal-1">Découpe de polystyrène pour logos, enseignes et lettrages à Bruxelles</h1>
     <p class="reveal reveal-2">Porté par 30 ans d'expertise technique, Tagada conseille, façonne et fabrique vos éléments 3D sur-mesure pour les agences de publicité, le retail et l'événementiel.</p>
     <div class="hero-actions reveal reveal-3">
       <a href="#portfolio" class="btn-secondary">Voir nos réalisations</a>
