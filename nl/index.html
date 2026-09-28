@@ -213,7 +213,8 @@ body.menu-open{ overflow:hidden; }
 .video-panel{ position:relative; z-index:1; max-width:1280px; margin:64px auto 0; padding:0 40px; }
 .video-frame{ position:relative; border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:16/8; }
 .video-frame img{ width:100%; height:100%; object-fit:cover; filter:saturate(.85); }
-.video-frame .scrim{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,6,3,.05) 0%, rgba(10,6,3,.35) 100%); }
+.video-frame .scrim{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,6,3,.05) 0%, rgba(10,6,3,.6) 100%); }
+.video-frame .video-caption{ position:absolute; left:24px; bottom:20px; z-index:2; margin:0; font-family:var(--font-body); font-weight:500; font-size:14px; color:var(--on-dark); text-shadow:0 1px 4px rgba(0,0,0,.4); }
 @media (max-width:640px){ .video-frame{ aspect-ratio:4/5; } }
 
 /* ---------- Intro (page-load) reveal — matches the reference's slideInBottom preset ---------- */
@@ -460,6 +461,7 @@ body.menu-open{ overflow:hidden; }
     <div class="video-frame">
       <img src="../Images/site/hero-video-panel.jpg" alt="Audi Q8-volume op ware grootte, gemaakt voor een event, tijdelijk in afwachting van de echte showreel">
       <div class="scrim"></div>
+      <p class="video-caption">Audi Q8 — levensgroot volume gerealiseerd voor een evenement.</p>
     </div>
   </div>
 </header>
