@@ -216,6 +216,7 @@ body.menu-open{ overflow:hidden; }
 .video-frame .scrim{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,6,3,.05) 0%, rgba(10,6,3,.6) 100%); opacity:0; transition:opacity .4s var(--ease); }
 .video-frame .video-caption{ position:absolute; left:24px; bottom:20px; z-index:2; margin:0; font-family:var(--font-body); font-weight:500; font-size:14px; color:var(--on-dark); text-shadow:0 1px 4px rgba(0,0,0,.4); opacity:0; transition:opacity .4s var(--ease); }
 .video-frame:hover .scrim, .video-frame:hover .video-caption{ opacity:1; }
+@media (hover:none){ .video-frame .scrim, .video-frame .video-caption{ opacity:1; } }
 @media (max-width:640px){ .video-frame{ aspect-ratio:4/5; } }
 
 /* ---------- Intro (page-load) reveal — matches the reference's slideInBottom preset ---------- */
@@ -323,7 +324,7 @@ body.menu-open{ overflow:hidden; }
 .accordion2.is-active .icon{ transform:rotate(45deg); }
 .accordion2.is-active .icon, .accordion2:hover .icon{ color:var(--on-dark); border-color:var(--on-dark); }
 .accordion2 .body{ position:relative; z-index:3; max-height:0; overflow:hidden; transition:max-height .7s var(--ease); }
-.accordion2.is-active .body{ max-height:160px; }
+.accordion2.is-active .body{ max-height:400px; }
 .accordion2 .body p{ margin:0; padding:0 26px 22px; font-size:15px; line-height:1.6; max-width:64ch; color:var(--on-dark); }
 .faq-more{ margin-top:56px; max-width:520px; }
 .faq-more h3{ font-size:26px; letter-spacing:-.01em; }
@@ -405,6 +406,21 @@ body.menu-open{ overflow:hidden; }
 .filter-btn:hover{ border-color:var(--ink-35); color:var(--ink); }
 .filter-btn.is-active{ background:var(--ink); border-color:var(--ink); color:var(--bg); }
 .p-card.is-hidden{ display:none; }
+/* ---------- Portfolio mobile: compact 2-col grid, capped at PORTFOLIO_MOBILE_LIMIT pieces (see script) ---------- */
+.portfolio-show-all{ display:none; }
+@media (max-width:640px){
+  .portfolio-grid{ columns:auto; display:grid; grid-template-columns:1fr 1fr; gap:20px 12px; }
+  .p-card{ margin-bottom:0; }
+  .p-card .frame img{ aspect-ratio:1/1; object-fit:cover; }
+  .p-card .body{ padding-top:10px; }
+  .p-card h3{ font-size:16px; }
+  .p-card .desc, .p-card .p-tags{ display:none; }
+  .portfolio-grid:not(.show-all) .p-card.is-extra{ display:none; }
+  .portfolio-filters{ gap:8px; }
+  .filter-btn{ padding:8px 14px; font-size:13px; }
+  .portfolio-show-all{ display:block; margin-top:32px; text-align:center; }
+  .portfolio-grid.show-all ~ .portfolio-show-all{ display:none; }
+}
 .menu-foot a.is-current{ color:var(--on-dark); text-decoration:underline; text-underline-offset:3px; }
 </style>
 </head>
@@ -429,7 +445,8 @@ body.menu-open{ overflow:hidden; }
   <div class="menu-panel">
     <div class="menu-links">
       <a href="#pourquoi" onclick="toggleMenu(false)">Expertise</a>
-      <a href="#portfolio" onclick="toggleMenu(false)">Portfolio</a>
+      <a href="#rse" onclick="toggleMenu(false)">Engagementen</a>
+      <a href="#portfolio" onclick="toggleMenu(false)">Realisaties</a>
       <a href="#atelier" onclick="toggleMenu(false)">Atelier</a>
       <a href="#faq" onclick="toggleMenu(false)">FAQ</a>
       <a href="#contact" onclick="toggleMenu(false)">Contact</a>
@@ -460,7 +477,7 @@ body.menu-open{ overflow:hidden; }
          </video>
          dès qu'un vrai showreel de l'atelier est disponible. -->
     <div class="video-frame">
-      <img src="../Images/site/hero-video-panel.jpg" alt="Audi Q8-volume op ware grootte, gemaakt voor een event, tijdelijk in afwachting van de echte showreel">
+      <img src="../Images/site/hero-video-panel.jpg" alt="Audi Q8-volume op ware grootte, gemaakt voor een event">
       <div class="scrim"></div>
       <p class="video-caption">Audi Q8 — levensgroot volume gerealiseerd voor een evenement.</p>
     </div>
@@ -488,17 +505,27 @@ body.menu-open{ overflow:hidden; }
       </a>
     </div>
     <div class="logos-row">
-      <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-audi.png" alt="Audi">
+      <a href="https://www.audi.com/" target="_blank" rel="noopener noreferrer" aria-label="Audi">
+        <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-audi.png" alt="Audi">
+      </a>
       <a href="https://www.coca-cola.com/" target="_blank" rel="noopener noreferrer" aria-label="Coca-Cola">
         <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-coca-cola.png" alt="Coca-Cola">
       </a>
       <a href="https://www.proximus.be/" target="_blank" rel="noopener noreferrer" aria-label="Proximus">
         <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-proximus.png" alt="Proximus">
       </a>
-      <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-pierre-marcolini.png" alt="Pierre Marcolini">
-      <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-rtl-tvi.png" alt="RTL-TVI">
-      <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-breitling.png" alt="Breitling">
-      <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-bic.png" alt="Bic">
+      <a href="https://www.marcolini.com/" target="_blank" rel="noopener noreferrer" aria-label="Pierre Marcolini">
+        <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-pierre-marcolini.png" alt="Pierre Marcolini">
+      </a>
+      <a href="https://www.rtl.be/" target="_blank" rel="noopener noreferrer" aria-label="RTL-TVI">
+        <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-rtl-tvi.png" alt="RTL-TVI">
+      </a>
+      <a href="https://www.breitling.com/" target="_blank" rel="noopener noreferrer" aria-label="Breitling">
+        <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-breitling.png" alt="Breitling">
+      </a>
+      <a href="https://www.bic.com/" target="_blank" rel="noopener noreferrer" aria-label="Bic">
+        <img loading="lazy" class="logo-chip reveal-io" src="../Images/site/logo-bic.png" alt="Bic">
+      </a>
     </div>
   </div>
 </section>
@@ -570,7 +597,7 @@ body.menu-open{ overflow:hidden; }
   <div class="wrap">
     <div class="section-head-row" data-reveal-group>
       <div class="section-head">
-        <div class="eyebrow reveal-io">Portfolio</div>
+        <div class="eyebrow reveal-io">Realisaties</div>
         <h2 class="reveal-io">Enkele realisaties.</h2>
         <p class="reveal-io">Een selectie van decors, uithangborden en scenografie ontworpen en gefabriceerd in ons atelier in Brussel.</p>
       </div>
@@ -914,6 +941,7 @@ body.menu-open{ overflow:hidden; }
         </div>
       </div>
     </div>
+    <div class="portfolio-show-all"><button class="btn-outline" type="button" onclick="document.querySelector('.portfolio-grid').classList.add('show-all')">Toon alle realisaties</button></div>
   </div>
 </section>
 
@@ -942,7 +970,7 @@ body.menu-open{ overflow:hidden; }
           <a href="#contact" class="btn-primary">Contact
             <span class="icon-slide"><svg class="ic-a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg><svg class="ic-b" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
           </a>
-          <a href="#" class="btn-secondary">Meer weten</a>
+          <a href="#portfolio" class="btn-secondary">Bekijk onze realisaties</a>
         </div>
       </div>
       <div class="atelier-media curtain reveal-io"><img loading="lazy" src="../Images/site/atelier-decoupe-precision.jpg" alt="Precisiesnede van een paneel op een CNC-machine in het atelier"><div class="cur-fill"></div></div>
@@ -1004,12 +1032,12 @@ body.menu-open{ overflow:hidden; }
   <div class="wrap">
     <div class="cta-card" data-reveal-group>
       <h2 class="reveal-io">Heeft u een gigantisch idee in gedachten?</h2>
-      <p class="reveal-io">Laten we het hebben over uw volgende project. Wij bekijken uw briefings, randvoorwaarden en budgetten binnen 48u.</p>
+      <p class="reveal-io">Laten we het hebben over uw volgende project. Wij bekijken uw briefings, randvoorwaarden en budgetten en antwoorden binnen 24 tot 48u.</p>
       <div class="cta-actions reveal-io">
         <a href="#contact" class="btn-primary">Aan de slag
           <span class="icon-slide"><svg class="ic-a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg><svg class="ic-b" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
-        <a href="#contact" class="btn-outline">Offerte</a>
+        <a href="tel:+3225343404" class="btn-outline">Bel het atelier</a>
       </div>
     </div>
   </div>
@@ -1023,39 +1051,39 @@ body.menu-open{ overflow:hidden; }
       <p class="reveal-io" style="color:var(--on-dark-60);">Stuur ons uw visuals of technische randvoorwaarden. Wij onderzoeken de haalbaarheid van uw project en antwoorden binnen 24 tot 48u.</p>
     </div>
     <div class="contact-grid" data-reveal-group>
-      <form class="reveal-io" onsubmit="return false;">
+      <form class="reveal-io" onsubmit="return false;"><!-- TODO : brancher sur un service d'envoi (Formspree, Netlify Forms…) -->
         <div class="row2">
-          <div class="field"><label>Voornaam</label><input type="text" placeholder="Camille"></div>
-          <div class="field"><label>Naam</label><input type="text" placeholder="Dupont"></div>
+          <div class="field"><label for="f-prenom">Voornaam</label><input id="f-prenom" name="prenom" type="text" placeholder="Camille"></div>
+          <div class="field"><label for="f-nom">Naam</label><input id="f-nom" name="nom" type="text" placeholder="Dupont"></div>
         </div>
         <div class="row2">
-          <div class="field"><label>E-mail</label><input type="email" placeholder="u@voorbeeld.com"></div>
-          <div class="field"><label>Telefoon</label><input type="tel" placeholder="+32 ..."></div>
+          <div class="field"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" placeholder="u@voorbeeld.com"></div>
+          <div class="field"><label for="f-tel">Telefoon</label><input id="f-tel" name="telephone" type="tel" placeholder="+32 ..."></div>
         </div>
         <div class="field">
-          <label>Type project</label>
-          <select>
-            <option>Selecteer…</option>
-            <option>Belettering</option>
-            <option>POS</option>
-            <option>Visuele signalisatie</option>
-            <option>Spectaculaire POS</option>
+          <label for="f-type">Type project</label>
+          <select id="f-type" name="type">
+            <option value="">Selecteer…</option>
+            <option>3D-logo's &amp; letters</option>
+            <option>Uithangborden &amp; retail</option>
+            <option>Decors &amp; reclameactivaties</option>
+            <option>Andere</option>
           </select>
         </div>
         <div class="field">
           <label>Wat heeft u nodig?</label>
           <div class="radios">
-            <label class="radio-opt"><input type="radio" name="besoin">Event</label>
-            <label class="radio-opt"><input type="radio" name="besoin">Etalage</label>
-            <label class="radio-opt"><input type="radio" name="besoin">Uithangbord</label>
-            <label class="radio-opt"><input type="radio" name="besoin">Beurs</label>
-            <label class="radio-opt"><input type="radio" name="besoin">Stand</label>
-            <label class="radio-opt"><input type="radio" name="besoin">Andere</label>
+            <label class="radio-opt"><input type="radio" name="besoin" value="Event">Event</label>
+            <label class="radio-opt"><input type="radio" name="besoin" value="Etalage">Etalage</label>
+            <label class="radio-opt"><input type="radio" name="besoin" value="Uithangbord">Uithangbord</label>
+            <label class="radio-opt"><input type="radio" name="besoin" value="Beurs">Beurs</label>
+            <label class="radio-opt"><input type="radio" name="besoin" value="Stand">Stand</label>
+            <label class="radio-opt"><input type="radio" name="besoin" value="Andere">Andere</label>
           </div>
         </div>
-        <div class="field"><label>Bericht</label><textarea placeholder="Uw bericht…"></textarea></div>
-        <div class="field"><label>Bestand (briefing, plan, 3D-visual…)</label><input type="file" accept=".pdf,.ai,.eps,.dwg,.stl,.step,.stp,.obj,.jpg,.jpeg,.png,.zip"></div>
-        <label class="check-opt"><input type="checkbox">Ik ga akkoord met de voorwaarden</label>
+        <div class="field"><label for="f-message">Bericht</label><textarea id="f-message" name="message" placeholder="Uw bericht…"></textarea></div>
+        <div class="field"><label for="f-fichier">Bestand (briefing, plan, 3D-visual…)</label><input id="f-fichier" name="fichier" type="file" accept=".pdf,.ai,.eps,.dwg,.stl,.step,.stp,.obj,.jpg,.jpeg,.png,.zip"></div>
+        <label class="check-opt"><input type="checkbox" name="consentement" required><span>Ik ga akkoord dat mijn gegevens verwerkt worden volgens het <a href="confidentialite.html" style="text-decoration:underline;">privacybeleid</a>.</span></label>
         <button class="btn-primary" type="submit">Stuur mijn briefing naar het atelier
           <span class="icon-slide"><svg class="ic-a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg><svg class="ic-b" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </button>
@@ -1071,7 +1099,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="info-block reveal-io">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div><h4>Atelier</h4><p>Rue de Fierlant 92, 1190 Brussel, België</p><a href="#">Route →</a></div>
+          <div><h4>Atelier</h4><p>Rue de Fierlant 92, 1190 Vorst (Brussel), België</p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Rue+de+Fierlant+92,+1190+Forest,+Belgique" target="_blank" rel="noopener noreferrer">Route →</a></div>
         </div>
       </div>
     </div>
@@ -1080,6 +1108,7 @@ body.menu-open{ overflow:hidden; }
 
 <footer>
   <div class="wrap" style="padding:80px 40px;">
+    <!-- Sociale links verborgen tot de echte Facebook / Instagram / LinkedIn-URL's gekend zijn
     <div class="footer-cols reveal-io" data-reveal-group>
       <div class="footer-col">
         <h5>Volg ons</h5>
@@ -1088,6 +1117,7 @@ body.menu-open{ overflow:hidden; }
         <a class="social-link" href="#"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V21H9z"/></svg>LinkedIn</a>
       </div>
     </div>
+    -->
     <div class="footer-credits">
       <span>© 2026 Tagada. Ontworpen en gemaakt in Brussel.</span>
       <div class="footer-legal"><a href="mentions-legales.html">Juridische vermeldingen</a><a href="confidentialite.html">Privacybeleid</a><a href="cookies.html">Cookies</a></div>
@@ -1104,13 +1134,23 @@ body.menu-open{ overflow:hidden; }
 </div>
 
 <script>
+/* On mobile only the first PORTFOLIO_MOBILE_LIMIT matching pieces show (CSS hides .is-extra
+   under 640px) — counted after filtering, so every filter still fills the grid. */
+var PORTFOLIO_MOBILE_LIMIT = 8;
+function applyPortfolioFilter(cat){
+  var shown = 0;
+  document.querySelectorAll('.p-card').forEach(function(c){
+    var isMatch = cat === 'all' || c.dataset.cat === cat;
+    c.classList.toggle('is-hidden', !isMatch);
+    c.classList.toggle('is-extra', isMatch && ++shown > PORTFOLIO_MOBILE_LIMIT);
+  });
+}
 function filterPortfolio(cat, btn){
   document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('is-active'); });
   btn.classList.add('is-active');
-  document.querySelectorAll('.p-card').forEach(function(c){
-    c.classList.toggle('is-hidden', cat !== 'all' && c.dataset.cat !== cat);
-  });
+  applyPortfolioFilter(cat);
 }
+applyPortfolioFilter('all');
 
 function toggleMenu(open){
   document.getElementById('menuOverlay').classList.toggle('is-open', open);

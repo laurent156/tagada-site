@@ -1,37 +1,62 @@
 # Tagada — Studio créatif
 
-Page d'accueil pour Tagada, un studio de fabrication de décors et enseignes sur-mesure basé à Bruxelles.
+Site vitrine de Tagada SRL, atelier bruxellois de découpe de polystyrène (EPS) et Forex : logos 3D, enseignes, lettrages, PLV et décors sur-mesure.
+
+Site statique en HTML/CSS/JS pur (pas de framework, pas de build), déployé sur GitHub Pages : https://laurent156.github.io/tagada-site/
 
 ## Contexte
 
-Traduction d'une maquette Figma (Relume Kit) dans le design system extrait du template Webflow [orange-template.webflow.io](https://orange-template.webflow.io/) : palette, typographie (Archivo / Inter Tight), rayons, easing, et composants (accordéon FAQ à "rideau", menu overlay avec ancres, panneau vidéo type showreel, hover sur les cartes projet).
+Traduction d'une maquette Figma (Relume Kit) dans le design system extrait du template Webflow [orange-template.webflow.io](https://orange-template.webflow.io/) : typographie (Archivo / Inter Tight), rayons, easing, et composants (accordéon FAQ à "rideau", menu overlay avec ancres, panneau vidéo type showreel, hover sur les cartes projet). Suite à la réunion client, la palette orange a été remplacée par une identité rouge (logo Tagada rouge, boutons et section Engagements en rouge).
+
+Le design system est documenté comme skill réutilisable dans `.claude/skills/orange-design-system/` (tokens CSS + composants).
 
 ## Pages
 
-- `index.html` — page d'accueil.
-- `mentions-legales.html` — identification légale de Tagada SRL (obligatoire en Belgique pour tout site professionnel, indépendamment de la vente en ligne).
-- `confidentialite.html` — politique de confidentialité RGPD (formulaire de contact + Google Analytics).
-- `cookies.html` — détail des cookies utilisés et gestion des préférences.
+| Page | FR | EN | NL |
+|---|---|---|---|
+| Accueil | `index.html` | `en/index.html` | `nl/index.html` |
+| Toutes les réalisations | `realisations.html` | — | — |
+| Mentions légales | `mentions-legales.html` | `en/…` | `nl/…` |
+| Confidentialité (RGPD) | `confidentialite.html` | `en/…` | `nl/…` |
+| Cookies | `cookies.html` | `en/…` | `nl/…` |
 
-Chaque page est un fichier autonome — polices et images encodées en base64, aucune dépendance externe. Peuvent être ouvertes directement dans un navigateur ou déployées telles quelles sur n'importe quel hébergeur statique (Netlify, Vercel, GitHub Pages, etc.).
+Le sélecteur de langue se trouve dans le menu overlay.
 
-**Pas de "Conditions générales"** : non nécessaires, le site ne vend rien en ligne (pas de panier, pas de contrat conclu à distance). Les CGV sont remplacées par les Mentions légales, qui elles sont obligatoires quel que soit le modèle du site.
+**Accueil** — sections dans l'ordre : hero (photo Audi Q8, légende au survol), barre de confiance (logos partenaires puis marques, liens vers leurs sites), Savoir-faire (`#pourquoi`), Engagements RSE (`#rse`), Réalisations (`#portfolio`, 30 pièces + lien vers la galerie complète ; sur mobile, grille 2 colonnes limitée à 8 pièces après filtre — `PORTFOLIO_MOBILE_LIMIT`), Atelier, FAQ, CTA, Contact.
+
+**Réalisations** — galerie complète de 72 photos clients.
+
+**Pas de "Conditions générales"** : non nécessaires, le site ne vend rien en ligne. Les Mentions légales, elles, sont obligatoires en Belgique pour tout site professionnel.
+
+## Structure
+
+```
+index.html, realisations.html, pages légales   # FR à la racine
+en/, nl/                                        # traductions (assets en ../)
+fonts/                                          # Archivo, Inter Tight (.ttf)
+Images/site/                                    # assets utilisés par le site (logos, hero, atelier)
+Images/site/portfolio2/                         # 72 photos de réalisations
+Images/Portfolio/                               # photos sources des clients (non utilisées directement)
+sitemap.xml, robots.txt, site.webmanifest, favicons
+```
+
+Le SEO de base est en place : balises meta/OG, données structurées JSON-LD, `hreflang`, sitemap.
 
 ## Cookies & Google Analytics
 
-Un bandeau de consentement (accepter/refuser) est présent sur toutes les pages, avec le choix mémorisé dans `localStorage` (`tagada_consent`). Tant que Google Analytics n'a pas d'ID, le bandeau s'affiche et fonctionne mais ne charge aucun script — c'est une coquille prête à l'emploi.
+Un bandeau de consentement (accepter/refuser) est présent sur toutes les pages, avec le choix mémorisé dans `localStorage` (`tagada_consent`). Tant que Google Analytics n'a pas d'ID, le bandeau s'affiche et fonctionne mais ne charge aucun script.
 
-**Avant de brancher Google Analytics** : dans chaque page HTML, chercher la ligne
+**Pour brancher Google Analytics** : dans chaque page HTML (FR, EN, NL), chercher la ligne
 ```js
 var GA_MEASUREMENT_ID = ''; // TODO : coller l'ID Google Analytics (format G-XXXXXXXXXX) une fois le compte créé
 ```
-et y coller l'ID de mesure (`G-XXXXXXXXXX`). Le script Analytics ne se charge qu'après acceptation du bandeau — c'est le comportement exigé par le RGPD/ePrivacy (pas de cookie de mesure d'audience avant consentement). Google Search Console n'a pas besoin de cette gestion : il ne dépose pas de cookies côté visiteur, seule la propriété doit être vérifiée dans la console Google (balise meta ou fichier à la racine, à ajouter séparément).
+et y coller l'ID de mesure. Le script ne se charge qu'après acceptation du bandeau (exigence RGPD/ePrivacy). Google Search Console ne dépose pas de cookies : seule la vérification de propriété est à ajouter (balise meta ou fichier à la racine).
 
-## Infos réelles vs. placeholder
+## Reste à faire avant mise en production
 
-Les coordonnées, l'adresse, les 4 catégories de services (Lettrage, POS, Signalétique visuelle, PLV spectaculaire) et les noms de clients (Quicksilver, Marlboro, Kia, Goodyear Dunlop, Walibi, Cora) viennent du site existant [tagada.be](https://www.tagada.be/Tagada/Home/Home.html).
-
-Restent à vérifier / remplacer avant mise en production :
-- Le panneau vidéo du header (actuellement un placeholder avec bouton play) — à remplacer par le vrai showreel de l'atelier.
-- Les 6 photos du portfolio (actuellement des placeholders architecturaux du kit Figma) — à remplacer par de vraies photos de réalisations pour chaque client cité.
-- Le texte des sections "Pourquoi" / "Atelier" et les réponses de la FAQ sont une proposition éditoriale, pas des faits vérifiés — à valider avec l'équipe Tagada.
+- **Showreel** : le panneau vidéo du hero référence `showreel-tagada.mp4`, absent du repo — à ajouter (l'image `hero-video-panel.jpg` sert de poster en attendant).
+- **Formulaire de contact** : non fonctionnel (`onsubmit="return false;"`) — à brancher sur un service d'envoi (Formspree, Netlify Forms, etc.).
+- **Google Analytics** : ID de mesure à renseigner (voir ci-dessus).
+- **Réseaux sociaux** : les liens Facebook / Instagram / LinkedIn du footer sont masqués (commentés dans le HTML de chaque page) en attendant les vraies URL.
+- **Galerie EN/NL** : `realisations.html` n'existe qu'en français ; sur mobile, les accueils EN/NL ont à la place un bouton « Show all / Toon alle » qui déplie les 30 pièces.
+- **Textes** : les sections Savoir-faire / Atelier et les réponses de la FAQ sont une proposition éditoriale, à valider avec l'équipe Tagada.
