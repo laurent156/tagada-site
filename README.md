@@ -22,9 +22,9 @@ Le design system est documenté comme skill réutilisable dans `.claude/skills/o
 
 Le sélecteur de langue se trouve dans le menu overlay.
 
-**Accueil** — sections dans l'ordre : hero (photo Audi Q8, légende au survol), barre de confiance (logos partenaires puis marques, liens vers leurs sites), Savoir-faire (`#pourquoi`), Engagements RSE (`#rse`), Réalisations (`#portfolio`, 30 pièces + lien vers la galerie complète ; sur mobile, grille 2 colonnes limitée à 8 pièces après filtre — `PORTFOLIO_MOBILE_LIMIT`), Atelier, FAQ, CTA, Contact.
+**Accueil** — sections dans l'ordre : hero (photo Audi Q8, légende au survol), barre de confiance (logos partenaires puis marques, liens vers leurs sites), Savoir-faire (`#pourquoi`), Engagements RSE (`#rse`), Réalisations (`#portfolio`, 26 pièces + lien vers la galerie complète ; sur mobile, grille 2 colonnes limitée à 8 pièces après filtre — `PORTFOLIO_MOBILE_LIMIT`), Atelier, FAQ, CTA, Contact.
 
-**Réalisations** — galerie complète de 72 photos clients.
+**Réalisations** — galerie complète de 70 photos clients.
 
 **Pas de "Conditions générales"** : non nécessaires, le site ne vend rien en ligne. Les Mentions légales, elles, sont obligatoires en Belgique pour tout site professionnel.
 
@@ -35,7 +35,7 @@ index.html, realisations.html, pages légales   # FR à la racine
 en/, nl/                                        # traductions (assets en ../)
 fonts/                                          # Archivo, Inter Tight (.ttf)
 Images/site/                                    # assets utilisés par le site (logos, hero, atelier)
-Images/site/portfolio2/                         # 72 photos de réalisations
+Images/site/portfolio2/                         # 70 photos de réalisations
 Images/Portfolio/                               # photos sources des clients (non utilisées directement)
 sitemap.xml, robots.txt, site.webmanifest, favicons
 ```
@@ -58,5 +58,5 @@ et y coller l'ID de mesure. Le script ne se charge qu'après acceptation du band
 - **Formulaire de contact** : non fonctionnel (`onsubmit="return false;"`) — à brancher sur un service d'envoi (Formspree, Netlify Forms, etc.).
 - **Google Analytics** : ID de mesure à renseigner (voir ci-dessus).
 - **Réseaux sociaux** : les liens Facebook / Instagram / LinkedIn du footer sont masqués (commentés dans le HTML de chaque page) en attendant les vraies URL.
-- **Galerie EN/NL** : `realisations.html` n'existe qu'en français ; sur mobile, les accueils EN/NL ont à la place un bouton « Show all / Toon alle » qui déplie les 30 pièces.
+- **Galerie EN/NL** : `realisations.html` n'existe qu'en français ; sur mobile, les accueils EN/NL ont à la place un bouton « Show all / Toon alle » qui déplie les 26 pièces.
 - **Textes** : les sections Savoir-faire / Atelier et les réponses de la FAQ sont une proposition éditoriale, à valider avec l'équipe Tagada.
