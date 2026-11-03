@@ -206,8 +206,10 @@ body.menu-open{ overflow:hidden; }
   .p-card .desc, .p-card .p-tags{ display:none; }
 }
 .p-card{ break-inside:avoid; margin-bottom:24px; }
+/* Fade only: a transform inside CSS columns can paint a moving card in two places */
+.p-card.reveal-io, .p-card.reveal-io.is-visible{ transform:none; transition:opacity .6s var(--ease); }
 .p-card .frame{ position:relative; border-radius:var(--radius-md); overflow:hidden; }
-.p-card .frame img{ width:100%; display:block; transition:transform 1s var(--ease); }
+.p-card .frame img{ width:100%; height:auto; display:block; transition:transform 1s var(--ease); }
 .p-card:hover .frame img{ transform:scale(1.08); }
 .p-card .body{ padding-top:20px; }
 .p-card h3{ font-size:22px; letter-spacing:-.01em; }
@@ -378,12 +380,12 @@ body.menu-open{ overflow:hidden; }
       <button class="filter-btn" onclick="filterPortfolio('enseignes', this)" type="button">Enseignes &amp; Retail</button>
       <button class="filter-btn" onclick="filterPortfolio('decors', this)" type="button">Décors &amp; Activations Pub</button>
     </div>
-    <div class="portfolio-grid" data-reveal-group>
+    <div class="portfolio-grid">
 
       
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-euroforum.jpg" alt="Euroforum">
+            <img loading="lazy" width="792" height="528" src="Images/site/portfolio2/portfolio2-euroforum.jpg" alt="Euroforum">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -394,7 +396,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-citroen-c4.jpg" alt="Citroën C4">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-citroen-c4.jpg" alt="Citroën C4">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -405,7 +407,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-volkswagen.jpg" alt="Volkswagen">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-volkswagen.jpg" alt="Volkswagen">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -416,7 +418,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-havana-club.jpg" alt="Havana Club">
+            <img loading="lazy" width="1100" height="737" src="Images/site/portfolio2/portfolio2-havana-club.jpg" alt="Havana Club">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -427,7 +429,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-jet-airways.jpg" alt="Jet Airways">
+            <img loading="lazy" width="1100" height="843" src="Images/site/portfolio2/portfolio2-jet-airways.jpg" alt="Jet Airways">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -438,7 +440,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-coca-cola.jpg" alt="Coca-Cola">
+            <img loading="lazy" width="731" height="1100" src="Images/site/portfolio2/portfolio2-coca-cola.jpg" alt="Coca-Cola">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -449,7 +451,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-delvaux.jpg" alt="Delvaux">
+            <img loading="lazy" width="1100" height="1007" src="Images/site/portfolio2/portfolio2-delvaux.jpg" alt="Delvaux">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -460,7 +462,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-pierre-marcolini.jpg" alt="Pierre Marcolini">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-pierre-marcolini.jpg" alt="Pierre Marcolini">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -471,7 +473,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-herta.jpg" alt="Herta">
+            <img loading="lazy" width="827" height="1100" src="Images/site/portfolio2/portfolio2-herta.jpg" alt="Herta">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -482,7 +484,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-delvaux-2.jpg" alt="Delvaux">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-delvaux-2.jpg" alt="Delvaux">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -493,7 +495,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-element61.jpg" alt="Element61">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-element61.jpg" alt="Element61">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -504,7 +506,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-besix.jpg" alt="Besix">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-besix.jpg" alt="Besix">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -515,7 +517,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-sd-worx.jpg" alt="SD Worx">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-sd-worx.jpg" alt="SD Worx">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -526,7 +528,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-audi.jpg" alt="Audi">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-audi.jpg" alt="Audi">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -537,7 +539,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-google.jpg" alt="Google">
+            <img loading="lazy" width="1100" height="822" src="Images/site/portfolio2/portfolio2-google.jpg" alt="Google">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -548,7 +550,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-criteo.jpg" alt="Criteo">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-criteo.jpg" alt="Criteo">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -559,7 +561,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-tagada.jpg" alt="Tagada">
+            <img loading="lazy" width="1100" height="733" src="Images/site/portfolio2/portfolio2-tagada.jpg" alt="Tagada">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -570,7 +572,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-bic.jpg" alt="Bic">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-bic.jpg" alt="Bic">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -581,7 +583,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-bic-2.jpg" alt="Bic">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-bic-2.jpg" alt="Bic">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -592,7 +594,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-ulb.jpg" alt="ULB">
+            <img loading="lazy" width="815" height="1100" src="Images/site/portfolio2/portfolio2-ulb.jpg" alt="ULB">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -603,7 +605,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-rtl-tvi.jpg" alt="RTL-TVI">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-rtl-tvi.jpg" alt="RTL-TVI">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -614,7 +616,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-ey.jpg" alt="EY">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-ey.jpg" alt="EY">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -625,7 +627,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-audi-2.jpg" alt="Audi">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-audi-2.jpg" alt="Audi">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -636,7 +638,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-nestle.jpg" alt="Nestlé">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-nestle.jpg" alt="Nestlé">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -647,7 +649,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-levi-s.jpg" alt="Levi&#x27;s">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-levi-s.jpg" alt="Levi&#x27;s">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -658,7 +660,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-rtl.jpg" alt="RTL">
+            <img loading="lazy" width="1100" height="731" src="Images/site/portfolio2/portfolio2-rtl.jpg" alt="RTL">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -669,7 +671,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-magritte-du-cinema.jpg" alt="Magritte du Cinéma">
+            <img loading="lazy" width="733" height="1100" src="Images/site/portfolio2/portfolio2-magritte-du-cinema.jpg" alt="Magritte du Cinéma">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -680,7 +682,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-mazda.jpg" alt="Mazda">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-mazda.jpg" alt="Mazda">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -691,7 +693,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-miss-sixty.jpg" alt="Miss Sixty">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-miss-sixty.jpg" alt="Miss Sixty">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -702,7 +704,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-opel.jpg" alt="Opel">
+            <img loading="lazy" width="480" height="640" src="Images/site/portfolio2/portfolio2-opel.jpg" alt="Opel">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -713,7 +715,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-coca-cola-2.jpg" alt="Coca-Cola">
+            <img loading="lazy" width="734" height="1100" src="Images/site/portfolio2/portfolio2-coca-cola-2.jpg" alt="Coca-Cola">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -724,7 +726,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-rob.jpg" alt="Rob">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-rob.jpg" alt="Rob">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -735,7 +737,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-rubson.jpg" alt="Rubson">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-rubson.jpg" alt="Rubson">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -746,7 +748,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-smart.jpg" alt="Smart">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-smart.jpg" alt="Smart">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -757,7 +759,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-total.jpg" alt="Total">
+            <img loading="lazy" width="1100" height="851" src="Images/site/portfolio2/portfolio2-total.jpg" alt="Total">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -768,7 +770,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-etam.jpg" alt="Etam">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-etam.jpg" alt="Etam">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -779,7 +781,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-les-freres-taloche.jpg" alt="Les Frères Taloche">
+            <img loading="lazy" width="742" height="1100" src="Images/site/portfolio2/portfolio2-les-freres-taloche.jpg" alt="Les Frères Taloche">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -790,7 +792,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-wolf.jpg" alt="Wolf">
+            <img loading="lazy" width="1100" height="809" src="Images/site/portfolio2/portfolio2-wolf.jpg" alt="Wolf">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -801,7 +803,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-sculpture-decorative.jpg" alt="Sculpture décorative">
+            <img loading="lazy" width="1024" height="768" src="Images/site/portfolio2/portfolio2-sculpture-decorative.jpg" alt="Sculpture décorative">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -812,7 +814,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-signaletique-retail.jpg" alt="Signalétique retail">
+            <img loading="lazy" width="392" height="886" src="Images/site/portfolio2/portfolio2-signaletique-retail.jpg" alt="Signalétique retail">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -823,7 +825,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-lettrage-evenementiel.jpg" alt="Lettrage événementiel">
+            <img loading="lazy" width="999" height="664" src="Images/site/portfolio2/portfolio2-lettrage-evenementiel.jpg" alt="Lettrage événementiel">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -834,7 +836,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-colonnes-decoratives.jpg" alt="Colonnes décoratives">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-colonnes-decoratives.jpg" alt="Colonnes décoratives">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -845,7 +847,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-sculpture-volume.jpg" alt="Sculpture volume">
+            <img loading="lazy" width="733" height="1100" src="Images/site/portfolio2/portfolio2-sculpture-volume.jpg" alt="Sculpture volume">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -856,7 +858,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-lettrage-volume.jpg" alt="Lettrage volume">
+            <img loading="lazy" width="1100" height="523" src="Images/site/portfolio2/portfolio2-lettrage-volume.jpg" alt="Lettrage volume">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -867,7 +869,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-logo-comptoir.jpg" alt="Logo comptoir">
+            <img loading="lazy" width="1100" height="966" src="Images/site/portfolio2/portfolio2-logo-comptoir.jpg" alt="Logo comptoir">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -878,7 +880,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-architectural.jpg" alt="Décor architectural">
+            <img loading="lazy" width="1100" height="737" src="Images/site/portfolio2/portfolio2-decor-architectural.jpg" alt="Décor architectural">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -889,7 +891,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-evenementiel.jpg" alt="Décor événementiel">
+            <img loading="lazy" width="1100" height="737" src="Images/site/portfolio2/portfolio2-decor-evenementiel.jpg" alt="Décor événementiel">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -900,7 +902,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-volume.jpg" alt="Décor volume">
+            <img loading="lazy" width="1001" height="1100" src="Images/site/portfolio2/portfolio2-decor-volume.jpg" alt="Décor volume">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -911,7 +913,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-interieur.jpg" alt="Décor intérieur">
+            <img loading="lazy" width="1100" height="736" src="Images/site/portfolio2/portfolio2-decor-interieur.jpg" alt="Décor intérieur">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -922,7 +924,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-enseigne-murale.jpg" alt="Enseigne murale">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-enseigne-murale.jpg" alt="Enseigne murale">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -933,7 +935,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-volume-decoratif.jpg" alt="Volume décoratif">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-volume-decoratif.jpg" alt="Volume décoratif">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -944,7 +946,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-volumes-atelier.jpg" alt="Volumes atelier">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-volumes-atelier.jpg" alt="Volumes atelier">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -955,7 +957,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-architectural-2.jpg" alt="Décor architectural">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-decor-architectural-2.jpg" alt="Décor architectural">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -966,7 +968,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-exterieur.jpg" alt="Décor extérieur">
+            <img loading="lazy" width="733" height="1100" src="Images/site/portfolio2/portfolio2-decor-exterieur.jpg" alt="Décor extérieur">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -977,7 +979,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-plv-volume.jpg" alt="PLV volume">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-plv-volume.jpg" alt="PLV volume">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -988,7 +990,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-volume-atelier.jpg" alt="Volume atelier">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-volume-atelier.jpg" alt="Volume atelier">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -999,7 +1001,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-plv-volume-2.jpg" alt="PLV volume">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-plv-volume-2.jpg" alt="PLV volume">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1010,7 +1012,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-enseigne-totem.jpg" alt="Enseigne totem">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-enseigne-totem.jpg" alt="Enseigne totem">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1021,7 +1023,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-volume-2.jpg" alt="Décor volume">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-decor-volume-2.jpg" alt="Décor volume">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1032,7 +1034,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-sculpture-decorative-2.jpg" alt="Sculpture décorative">
+            <img loading="lazy" width="822" height="1100" src="Images/site/portfolio2/portfolio2-sculpture-decorative-2.jpg" alt="Sculpture décorative">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1043,7 +1045,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-plateau-tv.jpg" alt="Décor plateau TV">
+            <img loading="lazy" width="1100" height="824" src="Images/site/portfolio2/portfolio2-decor-plateau-tv.jpg" alt="Décor plateau TV">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1054,7 +1056,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-volume-atelier-2.jpg" alt="Volume atelier">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-volume-atelier-2.jpg" alt="Volume atelier">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1065,7 +1067,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-entree-evenementiel.jpg" alt="Décor entrée événementiel">
+            <img loading="lazy" width="1100" height="761" src="Images/site/portfolio2/portfolio2-decor-entree-evenementiel.jpg" alt="Décor entrée événementiel">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1076,7 +1078,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="logos">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-logo-volume.jpg" alt="Logo volume">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-logo-volume.jpg" alt="Logo volume">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1087,7 +1089,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-vitrine.jpg" alt="Décor vitrine">
+            <img loading="lazy" width="1100" height="733" src="Images/site/portfolio2/portfolio2-decor-vitrine.jpg" alt="Décor vitrine">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1098,7 +1100,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-volume-3.jpg" alt="Décor volume">
+            <img loading="lazy" width="733" height="1100" src="Images/site/portfolio2/portfolio2-decor-volume-3.jpg" alt="Décor volume">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1109,7 +1111,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-sculpture-decorative-3.jpg" alt="Sculpture décorative">
+            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-sculpture-decorative-3.jpg" alt="Sculpture décorative">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1120,7 +1122,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-evenementiel-2.jpg" alt="Décor événementiel">
+            <img loading="lazy" width="1100" height="732" src="Images/site/portfolio2/portfolio2-decor-evenementiel-2.jpg" alt="Décor événementiel">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1131,7 +1133,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-installation-artistique.jpg" alt="Installation artistique">
+            <img loading="lazy" width="396" height="528" src="Images/site/portfolio2/portfolio2-installation-artistique.jpg" alt="Installation artistique">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1142,7 +1144,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="decors">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-showroom.jpg" alt="Décor showroom">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-decor-showroom.jpg" alt="Décor showroom">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1153,7 +1155,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-enseigne-commercante.jpg" alt="Enseigne commerçante">
+            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-enseigne-commercante.jpg" alt="Enseigne commerçante">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
@@ -1164,7 +1166,7 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" src="Images/site/portfolio2/portfolio2-decor-vitrine-2.jpg" alt="Décor vitrine">
+            <img loading="lazy" width="1100" height="732" src="Images/site/portfolio2/portfolio2-decor-vitrine-2.jpg" alt="Décor vitrine">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
