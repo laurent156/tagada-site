@@ -40,7 +40,9 @@ Images/Portfolio/                               # photos sources des clients (no
 sitemap.xml, robots.txt, site.webmanifest, favicons
 ```
 
-Le SEO de base est en place : balises meta/OG, données structurées JSON-LD, `hreflang`, sitemap.
+Le SEO de base est en place : balises meta/OG, `hreflang`, sitemap, et données structurées JSON-LD (`LocalBusiness` avec services et logo + `FAQPage` sur les accueils, `CollectionPage` listant les 76 projets sur `realisations.html`). Pour le GEO (moteurs IA), `llms.txt` résume le site à la racine.
+
+**À la mise en ligne sur tagada.be** : remplacer `https://laurent156.github.io/tagada-site/` partout (canonical, hreflang, OG, JSON-LD, `sitemap.xml`, `robots.txt`, `llms.txt`).
 
 ## Cookies & Google Analytics
 

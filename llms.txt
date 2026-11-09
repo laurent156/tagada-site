@@ -1,0 +1,41 @@
+# Tagada
+
+> Tagada SRL est un atelier bruxellois (Forest) de découpe de polystyrène EPS et de Forex. Depuis plus de 30 ans, il fabrique sur mesure des logos et lettres 3D, des enseignes, de la PLV, des décors événementiels et de la signalétique pour les agences, les marques, le retail et les scénographes, en Belgique et dans le nord de la France.
+
+Site disponible en français (principal), anglais et néerlandais.
+
+## Prestations
+
+- Enseignes In & Out : enseignes de façade, enseignes intérieures, lettrages en relief.
+- PLV : logos en volume, présentoirs, éléments de vitrine et de stand.
+- Décors : décors événementiels, plateaux TV, vitrines, objets géants, accessoires de scène.
+- Signalétique visuelle : signalétique en relief, totems, éléments directionnels.
+- Conseil et faisabilité technique : optimisation des fichiers 3D, choix des matériaux et des fixations.
+- Finitions : EPS haute densité, Forex, résinage de protection, peinture sur mesure Pantone/RAL.
+
+## Engagements
+
+- La légèreté de l'EPS et du Forex réduit jusqu'à 80 % le poids transporté par rapport au bois ou au métal, ce qui réduit l'empreinte carbone du transport.
+- Les chutes d'atelier et les éléments récupérés en fin de vie sont recyclés dans des filières belges locales.
+- Conception de structures modulables et réutilisables sur plusieurs campagnes.
+
+## Questions fréquentes
+
+- Délais : la plupart des projets sont fabriqués en deux à quatre semaines ; planning précis pour les structures complexes ou les séries.
+- Transport et pose : pièces conçues pour être démontables ; logistique et pose sur site assurées par Tagada ou en coordination avec le client.
+- Agences : Tagada travaille régulièrement avec des agences, des scénographes et des responsables visual merchandising, en sous-traitance ou en direct.
+
+## Contact
+
+- Adresse : Rue de Fierlant 92, 1190 Forest (Bruxelles), Belgique
+- Téléphone : +32 2 534 34 04
+- Email : info@tagada.be
+- Horaires : du lundi au vendredi, 9 h – 17 h 30
+
+## Pages
+
+- [Accueil (FR)](https://laurent156.github.io/tagada-site/) : savoir-faire, engagements, réalisations, atelier, FAQ, contact
+- [Toutes les réalisations](https://laurent156.github.io/tagada-site/realisations.html) : 76 projets classés par type, avec client ou agence
+- [Home (EN)](https://laurent156.github.io/tagada-site/en/)
+- [Home (NL)](https://laurent156.github.io/tagada-site/nl/)
+- [Mentions légales](https://laurent156.github.io/tagada-site/mentions-legales.html)
