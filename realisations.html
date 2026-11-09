@@ -203,7 +203,7 @@ body.menu-open{ overflow:hidden; }
   .p-card .frame img{ aspect-ratio:1/1; object-fit:cover; }
   .p-card .body{ padding-top:10px; }
   .p-card h3{ font-size:16px; }
-  .p-card .desc, .p-card .p-tags{ display:none; }
+  .p-card .desc, .p-card .credit, .p-card .p-tags{ display:none; }
 }
 .p-card{ break-inside:avoid; margin-bottom:24px; }
 /* Fade only: a transform inside CSS columns can paint a moving card in two places */
@@ -214,6 +214,7 @@ body.menu-open{ overflow:hidden; }
 .p-card .body{ padding-top:20px; }
 .p-card h3{ font-size:22px; letter-spacing:-.01em; }
 .p-card .desc{ margin-top:10px; font-size:15px; line-height:1.5; color:var(--ink-60); }
+.p-card .credit{ margin-top:6px; font-size:13px; color:var(--ink-60); }
 .p-tags{ margin-top:14px; display:flex; gap:8px; flex-wrap:wrap; }
 .p-tag{ font-family:var(--font-body); font-weight:500; font-size:12px; color:var(--ink-60); border:1px solid var(--ink-15); border-radius:6px; padding:5px 10px; }
 .portfolio-more{ margin-top:48px; text-align:center; }
@@ -368,7 +369,7 @@ body.menu-open{ overflow:hidden; }
   <div class="wrap">
     <div class="eyebrow reveal-io">Portfolio</div>
     <h1>Toutes nos réalisations.</h1>
-    <p>72 pièces façonnées dans notre atelier bruxellois, pour nos clients et nos partenaires.</p>
+    <p>76 pièces façonnées dans notre atelier bruxellois, pour nos clients et nos partenaires.</p>
   </div>
 </section>
 
@@ -376,781 +377,904 @@ body.menu-open{ overflow:hidden; }
   <div class="wrap">
     <div class="portfolio-filters reveal-io" data-reveal-group>
       <button class="filter-btn is-active" onclick="filterPortfolio('all', this)" type="button">Tous</button>
-      <button class="filter-btn" onclick="filterPortfolio('logos', this)" type="button">Logos &amp; Lettres 3D</button>
-      <button class="filter-btn" onclick="filterPortfolio('enseignes', this)" type="button">Enseignes &amp; Retail</button>
-      <button class="filter-btn" onclick="filterPortfolio('decors', this)" type="button">Décors &amp; Activations Pub</button>
+      <button class="filter-btn" onclick="filterPortfolio('enseignes', this)" type="button">Enseignes In &amp; Out</button>
+      <button class="filter-btn" onclick="filterPortfolio('plv', this)" type="button">PLV</button>
+      <button class="filter-btn" onclick="filterPortfolio('decor', this)" type="button">Décors</button>
+      <button class="filter-btn" onclick="filterPortfolio('signaletique', this)" type="button">Signalétique visuelle</button>
     </div>
     <div class="portfolio-grid">
-
-      
-        <div class="p-card reveal-io" data-cat="logos">
+        <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" width="792" height="528" src="Images/site/portfolio2/portfolio2-euroforum.jpg" alt="Euroforum">
+            <img loading="lazy" width="1200" height="676" src="Images/site/realisations/01-keytrade-bank.jpg" alt="KeyTrade Bank — Enseigne sur le mur d&#x27;accueil des bureaux.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Euroforum</h3>
-            <p class="desc">Lettrage événementiel en volume pour un salon professionnel.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-citroen-c4.jpg" alt="Citroën C4">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Citroën C4</h3>
-            <p class="desc">Logo C4 reproduit en volume, façonné en atelier.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
+            <h3>KeyTrade Bank</h3>
+            <p class="desc">Enseigne sur le mur d&#x27;accueil des bureaux.</p>
+            <p class="credit">@KeyTradeBank</p>
+            <div class="p-tags"><span class="p-tag">Enseignes In &amp; Out</span></div>
           </div>
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-volkswagen.jpg" alt="Volkswagen">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/02-abc-europe.jpg" alt="ABC Europe — Enseigne intérieure pour le point de vente du quartier Molière.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Volkswagen</h3>
-            <p class="desc">Enseigne de pavillon pour un espace de vente Volkswagen.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="737" src="Images/site/portfolio2/portfolio2-havana-club.jpg" alt="Havana Club">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Havana Club</h3>
-            <p class="desc">Décor de stand pour l&#x27;événement Fiesta Latina.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="843" src="Images/site/portfolio2/portfolio2-jet-airways.jpg" alt="Jet Airways">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Jet Airways</h3>
-            <p class="desc">Arche d&#x27;entrée événementielle aux couleurs de la marque.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="731" height="1100" src="Images/site/portfolio2/portfolio2-coca-cola.jpg" alt="Coca-Cola">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Coca-Cola</h3>
-            <p class="desc">Citrouille XXL pour une activation Halloween en point de vente.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>ABC Europe</h3>
+            <p class="desc">Enseigne intérieure pour le point de vente du quartier Molière.</p>
+            <p class="credit">@ABC Europe</p>
+            <div class="p-tags"><span class="p-tag">Enseignes In &amp; Out</span></div>
           </div>
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="1007" src="Images/site/portfolio2/portfolio2-delvaux.jpg" alt="Delvaux">
+            <img loading="lazy" width="1200" height="970" src="Images/site/realisations/03-ihpo.jpg" alt="IHPO — Enseigne en partie dans le vide pour le magasin de Braine-l&#x27;Alleud.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Delvaux</h3>
-            <p class="desc">Habillage de vitrine pour la maroquinerie Delvaux.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
+            <h3>IHPO</h3>
+            <p class="desc">Enseigne en partie dans le vide pour le magasin de Braine-l&#x27;Alleud.</p>
+            <p class="credit">@IHPO</p>
+            <div class="p-tags"><span class="p-tag">Enseignes In &amp; Out</span></div>
           </div>
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-pierre-marcolini.jpg" alt="Pierre Marcolini">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/04-kingspan.jpg" alt="Kingspan — Enseigne monumentale pour les entrepôts Kingspan.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Pierre Marcolini</h3>
-            <p class="desc">Chapeaux XXL en volume habillant la façade, campagne glace maison.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="827" height="1100" src="Images/site/portfolio2/portfolio2-herta.jpg" alt="Herta">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Herta</h3>
-            <p class="desc">Coffret cadeau géant pour les 40 ans de la marque.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Kingspan</h3>
+            <p class="desc">Enseigne monumentale pour les entrepôts Kingspan.</p>
+            <p class="credit">@Kingspan</p>
+            <div class="p-tags"><span class="p-tag">Enseignes In &amp; Out</span></div>
           </div>
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-delvaux-2.jpg" alt="Delvaux">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Delvaux</h3>
-            <p class="desc">Autre habillage de vitrine pour Delvaux.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-element61.jpg" alt="Element61">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Element61</h3>
-            <p class="desc">Logo de comptoir en volume pour un événement corporate.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-besix.jpg" alt="Besix">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Besix</h3>
-            <p class="desc">Lettrage extérieur monumental pour un événement de groupe.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-sd-worx.jpg" alt="SD Worx">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>SD Worx</h3>
-            <p class="desc">Logo de comptoir en volume pour un salon RH.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-audi.jpg" alt="Audi">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Audi</h3>
-            <p class="desc">Symbole # en volume avec logo Audi intégré.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="822" src="Images/site/portfolio2/portfolio2-google.jpg" alt="Google">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Google</h3>
-            <p class="desc">Logo Google en volume pour un événement corporate.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-criteo.jpg" alt="Criteo">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Criteo</h3>
-            <p class="desc">Lettrage événementiel pour la campagne Gold Quest.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="733" src="Images/site/portfolio2/portfolio2-tagada.jpg" alt="Tagada">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Tagada</h3>
-            <p class="desc">Panneau d&#x27;autopromotion posé en extérieur.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-bic.jpg" alt="Bic">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Bic</h3>
-            <p class="desc">Briquet monumental pour une opération PLV.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-bic-2.jpg" alt="Bic">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Bic</h3>
-            <p class="desc">Détail de finition du briquet monumental Bic.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="815" height="1100" src="Images/site/portfolio2/portfolio2-ulb.jpg" alt="ULB">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>ULB</h3>
-            <p class="desc">Logo de l&#x27;Université Libre de Bruxelles en volume.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-rtl-tvi.jpg" alt="RTL-TVI">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>RTL-TVI</h3>
-            <p class="desc">Lettrage logo grand format pour la chaîne RTL-TVI.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-ey.jpg" alt="EY">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>EY</h3>
-            <p class="desc">Lettrage logo EY en volume pour un événement corporate.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="enseignes">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-audi-2.jpg" alt="Audi">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Audi</h3>
-            <p class="desc">Lettrage R8 en volume dans un showroom Audi.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-nestle.jpg" alt="Nestlé">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Nestlé</h3>
-            <p class="desc">Logo Nestlé en volume, façonné en atelier.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-levi-s.jpg" alt="Levi&#x27;s">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Levi&#x27;s</h3>
-            <p class="desc">Lettrage logo Levi&#x27;s grand format.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="731" src="Images/site/portfolio2/portfolio2-rtl.jpg" alt="RTL">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>RTL</h3>
-            <p class="desc">Décor de plateau pour un événement sportif RTL.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="733" height="1100" src="Images/site/portfolio2/portfolio2-magritte-du-cinema.jpg" alt="Magritte du Cinéma">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Magritte du Cinéma</h3>
-            <p class="desc">Numéro monumental pour la 5e cérémonie des Magritte.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="enseignes">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-mazda.jpg" alt="Mazda">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Mazda</h3>
-            <p class="desc">Enseigne vitrine pour la campagne Mazda 2nd Life.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="enseignes">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-miss-sixty.jpg" alt="Miss Sixty">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/05-miss-sixty.jpg" alt="Miss Sixty — Enseigne sur profilé alu pour rectifier le relief de la façade.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
             <h3>Miss Sixty</h3>
-            <p class="desc">Enseigne de façade pour la boutique Miss Sixty.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
+            <p class="desc">Enseigne sur profilé alu pour rectifier le relief de la façade.</p>
+            <div class="p-tags"><span class="p-tag">Enseignes In &amp; Out</span></div>
           </div>
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" width="480" height="640" src="Images/site/portfolio2/portfolio2-opel.jpg" alt="Opel">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Opel</h3>
-            <p class="desc">PLV vitrine pour le lancement de l&#x27;Opel Meriva.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="enseignes">
-          <div class="frame curtain">
-            <img loading="lazy" width="734" height="1100" src="Images/site/portfolio2/portfolio2-coca-cola-2.jpg" alt="Coca-Cola">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Coca-Cola</h3>
-            <p class="desc">Bouteille géante en façade pour la campagne « Ready to share ? ».</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="enseignes">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-rob.jpg" alt="Rob">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/06-rob.jpg" alt="Rob — Enseigne intérieure pour le magasin Rob.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
             <h3>Rob</h3>
-            <p class="desc">Enseigne intérieure pour la bijouterie Rob.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-rubson.jpg" alt="Rubson">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Rubson</h3>
-            <p class="desc">Répliques de tubes produit à l&#x27;échelle XXL.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <p class="desc">Enseigne intérieure pour le magasin Rob.</p>
+            <p class="credit">@Rob</p>
+            <div class="p-tags"><span class="p-tag">Enseignes In &amp; Out</span></div>
           </div>
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-smart.jpg" alt="Smart">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/07-rob.jpg" alt="Rob — Lettrage pour différencier les rayons.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Smart</h3>
-            <p class="desc">PLV showroom pour le lancement de la Smart forFour.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="851" src="Images/site/portfolio2/portfolio2-total.jpg" alt="Total">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Total</h3>
-            <p class="desc">Répliques du mascotte Twisty en volume.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Rob</h3>
+            <p class="desc">Lettrage pour différencier les rayons.</p>
+            <p class="credit">@Rob</p>
+            <div class="p-tags"><span class="p-tag">Enseignes In &amp; Out</span></div>
           </div>
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-etam.jpg" alt="Etam">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Etam</h3>
-            <p class="desc">Décor de vitrine sur le thème du dinosaure.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="742" height="1100" src="Images/site/portfolio2/portfolio2-les-freres-taloche.jpg" alt="Les Frères Taloche">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Les Frères Taloche</h3>
-            <p class="desc">Décor PLV pour la tournée des 20 ans du spectacle.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="enseignes">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="809" src="Images/site/portfolio2/portfolio2-wolf.jpg" alt="Wolf">
+            <img loading="lazy" width="1200" height="882" src="Images/site/realisations/08-wolf.jpg" alt="Wolf — Enseigne de façade pour le concept store Wolf.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
             <h3>Wolf</h3>
             <p class="desc">Enseigne de façade pour le concept store Wolf.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="1024" height="768" src="Images/site/portfolio2/portfolio2-sculpture-decorative.jpg" alt="Sculpture décorative">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Sculpture décorative</h3>
-            <p class="desc">Sculpture en volume façonnée en atelier.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <p class="credit">@wolf</p>
+            <div class="p-tags"><span class="p-tag">Enseignes In &amp; Out</span></div>
           </div>
         </div>
         <div class="p-card reveal-io" data-cat="enseignes">
           <div class="frame curtain">
-            <img loading="lazy" width="392" height="886" src="Images/site/portfolio2/portfolio2-signaletique-retail.jpg" alt="Signalétique retail">
+            <img loading="lazy" width="1200" height="802" src="Images/site/realisations/09-raymond-goethals.jpg" alt="Raymond Goethals — Enseigne pour la tribune du stade Edmond-Machtens.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Signalétique retail</h3>
-            <p class="desc">Habillage de comptoir pour une opération commerciale.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
+            <h3>Raymond Goethals</h3>
+            <p class="desc">Enseigne pour la tribune du stade Edmond-Machtens.</p>
+            <p class="credit">@BG Partners</p>
+            <div class="p-tags"><span class="p-tag">Enseignes In &amp; Out</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="logos">
+        <div class="p-card reveal-io" data-cat="plv">
           <div class="frame curtain">
-            <img loading="lazy" width="999" height="664" src="Images/site/portfolio2/portfolio2-lettrage-evenementiel.jpg" alt="Lettrage événementiel">
+            <img loading="lazy" width="1200" height="800" src="Images/site/realisations/10-q8.jpg" alt="Q8 — Logo Audi Q8 pour un événement hippique.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Lettrage événementiel</h3>
-            <p class="desc">Grandes lettres en volume pour un événement.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
+            <h3>Q8</h3>
+            <p class="desc">Logo Audi Q8 pour un événement hippique.</p>
+            <p class="credit">@D&#x27;Ieteren</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="plv">
           <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-colonnes-decoratives.jpg" alt="Colonnes décoratives">
+            <img loading="lazy" width="1200" height="1054" src="Images/site/realisations/11-dot-shop.jpg" alt="Dot Shop — Logo en volume pour une ouverture de magasin.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Dot Shop</h3>
+            <p class="desc">Logo en volume pour une ouverture de magasin.</p>
+            <p class="credit">@Créaction</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/12-breitling.jpg" alt="Breitling — Logo en volume pour un événement corporate.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Breitling</h3>
+            <p class="desc">Logo en volume pour un événement corporate.</p>
+            <p class="credit">@Breitling</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/13-element-61.jpg" alt="Element 61 — Logo en volume pour un événement corporate.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Element 61</h3>
+            <p class="desc">Logo en volume pour un événement corporate.</p>
+            <p class="credit">@element61</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/14-besix.jpg" alt="Besix — Lettrage extérieur monumental pour un événement de golf.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Besix</h3>
+            <p class="desc">Lettrage extérieur monumental pour un événement de golf.</p>
+            <p class="credit">@dcoenen</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/15-sd-worx.jpg" alt="SD Worx — Logo en volume pour un événement corporate.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>SD Worx</h3>
+            <p class="desc">Logo en volume pour un événement corporate.</p>
+            <p class="credit">@sdworx</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="896" src="Images/site/realisations/16-google.jpg" alt="Google — Logo en volume pour un événement corporate.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Google</h3>
+            <p class="desc">Logo en volume pour un événement corporate.</p>
+            <p class="credit">@D-Side</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/17-citroen.jpg" alt="Citroën — Logo C4 Cactus pour un salon commercial.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Citroën</h3>
+            <p class="desc">Logo C4 Cactus pour un salon commercial.</p>
+            <p class="credit">@AFirstImpression</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/18-besix.jpg" alt="Besix — Logo en volume pour un événement corporate.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Besix</h3>
+            <p class="desc">Logo en volume pour un événement corporate.</p>
+            <p class="credit">@DDMC</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/19-ey.jpg" alt="EY — Logo 3D pour un événement corporate.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>EY</h3>
+            <p class="desc">Logo 3D pour un événement corporate.</p>
+            <p class="credit">@DDMC @ASP</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/20-q8.jpg" alt="Q8 — Logo Q8 dans un showroom Audi.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Q8</h3>
+            <p class="desc">Logo Q8 dans un showroom Audi.</p>
+            <p class="credit">@D&#x27;Ieteren</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="797" src="Images/site/realisations/21-kia.jpg" alt="Kia — Logo et lettres sur voitures pour une publicité lors d&#x27;un événement sportif.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Kia</h3>
+            <p class="desc">Logo et lettres sur voitures pour une publicité lors d&#x27;un événement sportif.</p>
+            <p class="credit">@Verhulst</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="424" height="600" src="Images/site/realisations/22-20.jpg" alt="20 — Chiffres géants pour la tournée des 20 ans.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>20</h3>
+            <p class="desc">Chiffres géants pour la tournée des 20 ans.</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="792" height="528" src="Images/site/realisations/23-eureform.jpg" alt="#EUREFORM — Lettres pour un événement du Parlement européen.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>#EUREFORM</h3>
+            <p class="desc">Lettres pour un événement du Parlement européen.</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="800" src="Images/site/realisations/24-tagada.jpg" alt="Tagada — Panneau d&#x27;autopromotion posé en extérieur pour un événement de golf.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Tagada</h3>
+            <p class="desc">Panneau d&#x27;autopromotion posé en extérieur pour un événement de golf.</p>
+            <p class="credit">@Golf7Fontaines</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/25-pigeons.jpg" alt="Pigeons — Logo grand format pour le plateau de l&#x27;émission « On n&#x27;est pas des pigeons ».">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Pigeons</h3>
+            <p class="desc">Logo grand format pour le plateau de l&#x27;émission « On n&#x27;est pas des pigeons ».</p>
+            <p class="credit">@RTBF</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="889" height="1200" src="Images/site/realisations/26-ulb.jpg" alt="ULB — Logo de l&#x27;Université libre de Bruxelles en volume.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>ULB</h3>
+            <p class="desc">Logo de l&#x27;Université libre de Bruxelles en volume.</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/27-rtl-tvi.jpg" alt="RTL-TVI — Logo grand format pour la chaîne RTL-TVI.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>RTL-TVI</h3>
+            <p class="desc">Logo grand format pour la chaîne RTL-TVI.</p>
+            <p class="credit">@RTL-TVI</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/28-nestle.jpg" alt="Nestlé — Logo à suspendre pour une foire commerciale.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Nestlé</h3>
+            <p class="desc">Logo à suspendre pour une foire commerciale.</p>
+            <p class="credit">@EPO</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="800" height="1200" src="Images/site/realisations/29-magritte-du-cinema.jpg" alt="Magritte du Cinéma — Numéro monumental pour la 5e cérémonie des Magritte.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Magritte du Cinéma</h3>
+            <p class="desc">Numéro monumental pour la 5e cérémonie des Magritte.</p>
+            <p class="credit">@VOO</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/30-mazda-occasion-garantie.jpg" alt="Mazda occasion garantie — Projet de PLV pour un showroom Mazda.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Mazda occasion garantie</h3>
+            <p class="desc">Projet de PLV pour un showroom Mazda.</p>
+            <p class="credit">@Créaset</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/31-smart.jpg" alt="Smart — PLV showroom pour le lancement de la Smart forFour.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Smart</h3>
+            <p class="desc">PLV showroom pour le lancement de la Smart forFour.</p>
+            <p class="credit">@Zebra</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="928" src="Images/site/realisations/32-twisty.jpg" alt="Twisty — Répliques de la mascotte Twisty en volume pour une chaîne d&#x27;opticiens.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Twisty</h3>
+            <p class="desc">Répliques de la mascotte Twisty en volume pour une chaîne d&#x27;opticiens.</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="800" src="Images/site/realisations/33-baker-mckenzie.jpg" alt="Baker McKenzie — Logo en volume pour un événement corporate.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Baker McKenzie</h3>
+            <p class="desc">Logo en volume pour un événement corporate.</p>
+            <p class="credit">@Rhizome</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="736" height="759" src="Images/site/realisations/34-ibm.jpg" alt="IBM — Logo en volume pour un événement corporate.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>IBM</h3>
+            <p class="desc">Logo en volume pour un événement corporate.</p>
+            <p class="credit">@Rhizome</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="392" height="886" src="Images/site/realisations/35-totem.jpg" alt="Totem — Totem promotionnel pour la banque Belfius.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Totem</h3>
+            <p class="desc">Totem promotionnel pour la banque Belfius.</p>
+            <p class="credit">@Criteres</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="571" src="Images/site/realisations/36-a1.jpg" alt="A1 — Logo Audi A1 mis en situation pour la fête nationale.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>A1</h3>
+            <p class="desc">Logo Audi A1 mis en situation pour la fête nationale.</p>
+            <p class="credit">@D-Side</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/37-bic.jpg" alt="Bic — Briquet monumental pour un événement corporate.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Bic</h3>
+            <p class="desc">Briquet monumental pour un événement corporate.</p>
+            <p class="credit">@BIC</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="800" height="1200" src="Images/site/realisations/38-free-your-taste.jpg" alt="Free your taste — Habillage de stand pour Barry Callebaut.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Free your taste</h3>
+            <p class="desc">Habillage de stand pour Barry Callebaut.</p>
+            <p class="credit">@Barry-CallebautBelgium</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="902" height="1200" src="Images/site/realisations/39-herta.jpg" alt="Herta — Cadeau géant pour les 40 ans de la marque.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Herta</h3>
+            <p class="desc">Cadeau géant pour les 40 ans de la marque.</p>
+            <p class="credit">@SimplyBetter</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/40-coca-cola.jpg" alt="Coca-Cola — Bouteille géante Coca-Cola.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Coca-Cola</h3>
+            <p class="desc">Bouteille géante Coca-Cola.</p>
+            <p class="credit">@Pop-Média</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/41-tube-de-colle.jpg" alt="Tube de colle — Réplique de tube produit à l&#x27;échelle XXL.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Tube de colle</h3>
+            <p class="desc">Réplique de tube produit à l&#x27;échelle XXL.</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/42-belux.jpg" alt="BELUX — Structure 3D pour le 100e anniversaire de la BELUX, l&#x27;Union économique belgo-luxembourgeoise.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>BELUX</h3>
+            <p class="desc">Structure 3D pour le 100e anniversaire de la BELUX, l&#x27;Union économique belgo-luxembourgeoise.</p>
+            <p class="credit">@Créaset</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="plv">
+          <div class="frame curtain">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/43-totem-bpost.jpg" alt="Totem Bpost — Totem d&#x27;accueil en volume pour un salon.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Totem Bpost</h3>
+            <p class="desc">Totem d&#x27;accueil en volume pour un salon.</p>
+            <div class="p-tags"><span class="p-tag">PLV</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="799" height="1200" src="Images/site/realisations/44-robot-et-virus.jpg" alt="Robot et virus — Décor pour la présentation d&#x27;un nouveau produit GSK.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Robot et virus</h3>
+            <p class="desc">Décor pour la présentation d&#x27;un nouveau produit GSK.</p>
+            <p class="credit">@TargetOne</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="999" height="664" src="Images/site/realisations/45-lettres.jpg" alt="Lettres — Lettres géantes sur lesquelles on peut s&#x27;asseoir, pour l&#x27;événement « Education Summit » de la Commission européenne.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Lettres</h3>
+            <p class="desc">Lettres géantes sur lesquelles on peut s&#x27;asseoir, pour l&#x27;événement « Education Summit » de la Commission européenne.</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="1098" src="Images/site/realisations/46-delvaux.jpg" alt="Delvaux — Cœur pour l&#x27;habillage des vitrines.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Delvaux</h3>
+            <p class="desc">Cœur pour l&#x27;habillage des vitrines.</p>
+            <p class="credit">@Delvaux</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="803" src="Images/site/realisations/47-parc-asterix.jpg" alt="Parc Astérix — Boucliers de 1,2 m de diamètre pour les 20 ans du parc.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Parc Astérix</h3>
+            <p class="desc">Boucliers de 1,2 m de diamètre pour les 20 ans du parc.</p>
+            <p class="credit">@Focalise @BelCTP</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="1092" height="1200" src="Images/site/realisations/48-chandelier.jpg" alt="Chandelier — Chandelier géant pour un décor de soirée.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Chandelier</h3>
+            <p class="desc">Chandelier géant pour un décor de soirée.</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/49-delvaux.jpg" alt="Delvaux — Fausse cheminée pour l&#x27;habillage des vitrines.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Delvaux</h3>
+            <p class="desc">Fausse cheminée pour l&#x27;habillage des vitrines.</p>
+            <p class="credit">@Delvaux</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/50-parc-asterix.jpg" alt="Parc Astérix — Boucliers géants de 2,4 m de diamètre pour les 20 ans du parc.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Parc Astérix</h3>
+            <p class="desc">Boucliers géants de 2,4 m de diamètre pour les 20 ans du parc.</p>
+            <p class="credit">@Focalise @BelCTP</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/51-chanel.jpg" alt="Chanel — Objets géants Chanel pour un décor de fin d&#x27;année.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Chanel</h3>
+            <p class="desc">Objets géants Chanel pour un décor de fin d&#x27;année.</p>
+            <p class="credit">@Pop-Média</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/52-quilles-geantes.jpg" alt="Quilles géantes — Quilles de bowling XXL pour une opération PLV.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Quilles géantes</h3>
+            <p class="desc">Quilles de bowling XXL pour une opération PLV.</p>
+            <p class="credit">@IdEvent</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/53-delvaux.jpg" alt="Delvaux — Fausse cheminée pour l&#x27;habillage des vitrines.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Delvaux</h3>
+            <p class="desc">Fausse cheminée pour l&#x27;habillage des vitrines.</p>
+            <p class="credit">@Delvaux</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/54-squelette-de-dinosaure.jpg" alt="Squelette de dinosaure — Éléments de décor pour le centre commercial Ville 2 à Charleroi.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Squelette de dinosaure</h3>
+            <p class="desc">Éléments de décor pour le centre commercial Ville 2 à Charleroi.</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/55-gomme-geante.jpg" alt="Gomme géante — Éléments de décor pour l&#x27;événement « Education Summit » de la Commission européenne.">
+            <div class="cur-fill"></div>
+          </div>
+          <div class="body">
+            <h3>Gomme géante</h3>
+            <p class="desc">Éléments de décor pour l&#x27;événement « Education Summit » de la Commission européenne.</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
+          </div>
+        </div>
+        <div class="p-card reveal-io" data-cat="decor">
+          <div class="frame curtain">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/56-colonnes-decoratives.jpg" alt="Colonnes décoratives — Colonnes classiques façonnées en atelier pour un char de la Zinneke Parade.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
             <h3>Colonnes décoratives</h3>
-            <p class="desc">Colonnes classiques façonnées en atelier pour un décor.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <p class="desc">Colonnes classiques façonnées en atelier pour un char de la Zinneke Parade.</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="decor">
           <div class="frame curtain">
-            <img loading="lazy" width="733" height="1100" src="Images/site/portfolio2/portfolio2-sculpture-volume.jpg" alt="Sculpture volume">
+            <img loading="lazy" width="1182" height="791" src="Images/site/realisations/57-baby-foot.jpg" alt="Baby-foot — Réplique géante des joueurs en bois d&#x27;un baby-foot.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Sculpture volume</h3>
-            <p class="desc">Sculpture abstraite en volume, façonnée en atelier.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Baby-foot</h3>
+            <p class="desc">Réplique géante des joueurs en bois d&#x27;un baby-foot.</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="logos">
+        <div class="p-card reveal-io" data-cat="decor">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="523" src="Images/site/portfolio2/portfolio2-lettrage-volume.jpg" alt="Lettrage volume">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Lettrage volume</h3>
-            <p class="desc">Lettres capitales en volume coloré.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="logos">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="966" src="Images/site/portfolio2/portfolio2-logo-comptoir.jpg" alt="Logo comptoir">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Logo comptoir</h3>
-            <p class="desc">Logo de comptoir en volume pour un point de vente.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="737" src="Images/site/portfolio2/portfolio2-decor-architectural.jpg" alt="Décor architectural">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/58-decor-architectural.jpg" alt="Décor architectural — Éléments de décor pour un parc d&#x27;attractions.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
             <h3>Décor architectural</h3>
-            <p class="desc">Élément décoratif architectural façonné en atelier.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <p class="desc">Éléments de décor pour un parc d&#x27;attractions.</p>
+            <p class="credit">@LM3D</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="decor">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="737" src="Images/site/portfolio2/portfolio2-decor-evenementiel.jpg" alt="Décor événementiel">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/59-decor-en-volume.jpg" alt="Décor en volume — Vague décorative pour le stand Remeha au salon Batibouw.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Décor événementiel</h3>
-            <p class="desc">Garland décoratif pour un anniversaire de marque.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Décor en volume</h3>
+            <p class="desc">Vague décorative pour le stand Remeha au salon Batibouw.</p>
+            <p class="credit">@A&amp;Bproject</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="decor">
           <div class="frame curtain">
-            <img loading="lazy" width="1001" height="1100" src="Images/site/portfolio2/portfolio2-decor-volume.jpg" alt="Décor volume">
+            <img loading="lazy" width="896" height="1200" src="Images/site/realisations/60-sculpture-decorative.jpg" alt="Sculpture décorative — Objet géant pour un décor de soirée.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Décor volume</h3>
-            <p class="desc">Chandelier décoratif en volume.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Sculpture décorative</h3>
+            <p class="desc">Objet géant pour un décor de soirée.</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="decor">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="736" src="Images/site/portfolio2/portfolio2-decor-interieur.jpg" alt="Décor intérieur">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/61-chapeaux.jpg" alt="Chapeaux — Chapeaux XXL assemblés pour l&#x27;habillage de la façade de Pierre Marcolini.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Décor intérieur</h3>
-            <p class="desc">Volumes lumineux pour un aménagement intérieur retail.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Chapeaux</h3>
+            <p class="desc">Chapeaux XXL assemblés pour l&#x27;habillage de la façade de Pierre Marcolini.</p>
+            <p class="credit">@Créaset</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="enseignes">
+        <div class="p-card reveal-io" data-cat="decor">
           <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-enseigne-murale.jpg" alt="Enseigne murale">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/62-pierre-marcolini.jpg" alt="Pierre Marcolini — Chapeaux XXL en volume habillant la façade, campagne glace maison.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Enseigne murale</h3>
-            <p class="desc">Enseigne murale en volume peint.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
+            <h3>Pierre Marcolini</h3>
+            <p class="desc">Chapeaux XXL en volume habillant la façade, campagne glace maison.</p>
+            <p class="credit">@Créaset</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="decor">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-volume-decoratif.jpg" alt="Volume décoratif">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/63-touring.jpg" alt="Touring — Pneu géant pour décorer le stand Touring.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Volume décoratif</h3>
-            <p class="desc">Élément aérodynamique en volume, façonné en atelier.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Touring</h3>
+            <p class="desc">Pneu géant pour décorer le stand Touring.</p>
+            <p class="credit">@Realidées</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="decor">
           <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-volumes-atelier.jpg" alt="Volumes atelier">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Volumes atelier</h3>
-            <p class="desc">Volumes en cours de façonnage, avant peinture.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-decor-architectural-2.jpg" alt="Décor architectural">
+            <img loading="lazy" width="803" height="1200" src="Images/site/realisations/64-decor-architectural.jpg" alt="Décor architectural — Éléments de décor pour un film.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
             <h3>Décor architectural</h3>
-            <p class="desc">Élément architectural en volume, façonné en atelier.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <p class="desc">Éléments de décor pour un film.</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="decor">
           <div class="frame curtain">
-            <img loading="lazy" width="733" height="1100" src="Images/site/portfolio2/portfolio2-decor-exterieur.jpg" alt="Décor extérieur">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/65-telecommande-geante.jpg" alt="Télécommande géante — Réplique d&#x27;objet du quotidien à l&#x27;échelle XXL.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Décor extérieur</h3>
-            <p class="desc">Élément installé en extérieur, dans le contexte du bâtiment.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-plv-volume.jpg" alt="PLV volume">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>PLV volume</h3>
-            <p class="desc">Quilles de bowling XXL pour une opération PLV.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-volume-atelier.jpg" alt="Volume atelier">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Volume atelier</h3>
-            <p class="desc">Volume organique en cours de façonnage.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="decors">
-          <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-plv-volume-2.jpg" alt="PLV volume">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>PLV volume</h3>
+            <h3>Télécommande géante</h3>
             <p class="desc">Réplique d&#x27;objet du quotidien à l&#x27;échelle XXL.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <p class="credit">@DDMC</p>
+            <div class="p-tags"><span class="p-tag">Décors</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="enseignes">
+        <div class="p-card reveal-io" data-cat="signaletique">
           <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-enseigne-totem.jpg" alt="Enseigne totem">
+            <img loading="lazy" width="803" height="1200" src="Images/site/realisations/66-totem.jpg" alt="Totem — Totem d&#x27;information pour un événement équestre.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Enseigne totem</h3>
-            <p class="desc">Totem d&#x27;accueil en volume pour un espace corporate.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
+            <h3>Totem</h3>
+            <p class="desc">Totem d&#x27;information pour un événement équestre.</p>
+            <p class="credit">@Verhulst</p>
+            <div class="p-tags"><span class="p-tag">Signalétique visuelle</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="signaletique">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-decor-volume-2.jpg" alt="Décor volume">
+            <img loading="lazy" width="1200" height="803" src="Images/site/realisations/67-fiesta-latina.jpg" alt="Fiesta Latina — Portique événementiel pour Fiesta Latina, en partenariat avec Havana Club.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Décor volume</h3>
-            <p class="desc">Vague décorative en volume peint.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Fiesta Latina</h3>
+            <p class="desc">Portique événementiel pour Fiesta Latina, en partenariat avec Havana Club.</p>
+            <p class="credit">@BeeGroup-PurpleBee</p>
+            <div class="p-tags"><span class="p-tag">Signalétique visuelle</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="signaletique">
           <div class="frame curtain">
-            <img loading="lazy" width="822" height="1100" src="Images/site/portfolio2/portfolio2-sculpture-decorative-2.jpg" alt="Sculpture décorative">
+            <img loading="lazy" width="1200" height="920" src="Images/site/realisations/68-jet-airways.jpg" alt="Jet Airways — Arche d&#x27;entrée événementielle aux couleurs de la marque.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Sculpture décorative</h3>
-            <p class="desc">Sculpture en volume peint pour un décor extérieur.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Jet Airways</h3>
+            <p class="desc">Arche d&#x27;entrée événementielle aux couleurs de la marque.</p>
+            <p class="credit">@BTE</p>
+            <div class="p-tags"><span class="p-tag">Signalétique visuelle</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="signaletique">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="824" src="Images/site/portfolio2/portfolio2-decor-plateau-tv.jpg" alt="Décor plateau TV">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/69-volkswagen.jpg" alt="Volkswagen — Enseigne éphémère pour un pop-up store au Zoute.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Décor plateau TV</h3>
-            <p class="desc">Lettrage lumineux pour un décor de plateau télé.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Volkswagen</h3>
+            <p class="desc">Enseigne éphémère pour un pop-up store au Zoute.</p>
+            <p class="credit">@Verhulst</p>
+            <div class="p-tags"><span class="p-tag">Signalétique visuelle</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="signaletique">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-volume-atelier-2.jpg" alt="Volume atelier">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/70-lancome.jpg" alt="Lancôme — Portique événementiel pour Lancôme.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Volume atelier</h3>
-            <p class="desc">Élément en volume peint, avant assemblage.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Lancôme</h3>
+            <p class="desc">Portique événementiel pour Lancôme.</p>
+            <p class="credit">@SimplyBetter</p>
+            <div class="p-tags"><span class="p-tag">Signalétique visuelle</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="signaletique">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="761" src="Images/site/portfolio2/portfolio2-decor-entree-evenementiel.jpg" alt="Décor entrée événementiel">
+            <img loading="lazy" width="800" height="1200" src="Images/site/realisations/71-flory-van-donck-trophy.jpg" alt="Flory Van Donck Trophy — Enseigne événementielle.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Décor entrée événementiel</h3>
-            <p class="desc">Arche d&#x27;entrée en volume pour un événement extérieur.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Flory Van Donck Trophy</h3>
+            <p class="desc">Enseigne événementielle.</p>
+            <p class="credit">@Golf7Fontaines</p>
+            <div class="p-tags"><span class="p-tag">Signalétique visuelle</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="logos">
+        <div class="p-card reveal-io" data-cat="signaletique">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-logo-volume.jpg" alt="Logo volume">
+            <img loading="lazy" width="1200" height="830" src="Images/site/realisations/72-portique-imperial.jpg" alt="Portique impérial — Portique événementiel pour la commémoration du bicentenaire de la bataille de Waterloo.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Logo volume</h3>
-            <p class="desc">Élément de logo en volume peint, façonné en atelier.</p>
-            <div class="p-tags"><span class="p-tag">Logos &amp; Lettres 3D</span></div>
+            <h3>Portique impérial</h3>
+            <p class="desc">Portique événementiel pour la commémoration du bicentenaire de la bataille de Waterloo.</p>
+            <p class="credit">@Verhulst</p>
+            <div class="p-tags"><span class="p-tag">Signalétique visuelle</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="enseignes">
+        <div class="p-card reveal-io" data-cat="signaletique">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="733" src="Images/site/portfolio2/portfolio2-decor-vitrine.jpg" alt="Décor vitrine">
+            <img loading="lazy" width="900" height="1200" src="Images/site/realisations/73-fleche-directionnelle.jpg" alt="Flèche directionnelle — Fléchage 3D sur mesure pour un événement.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Décor vitrine</h3>
-            <p class="desc">Habillage de vitrine sur le thème gourmand.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
+            <h3>Flèche directionnelle</h3>
+            <p class="desc">Fléchage 3D sur mesure pour un événement.</p>
+            <div class="p-tags"><span class="p-tag">Signalétique visuelle</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="signaletique">
           <div class="frame curtain">
-            <img loading="lazy" width="825" height="1100" src="Images/site/portfolio2/portfolio2-sculpture-decorative-3.jpg" alt="Sculpture décorative">
+            <img loading="lazy" width="1200" height="900" src="Images/site/realisations/74-mobistar.jpg" alt="Mobistar — Panneaux d&#x27;information avec lettres en relief, à accrocher sur une structure truss.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Sculpture décorative</h3>
-            <p class="desc">Sculpture en volume peint, façonnée en atelier.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Mobistar</h3>
+            <p class="desc">Panneaux d&#x27;information avec lettres en relief, à accrocher sur une structure truss.</p>
+            <div class="p-tags"><span class="p-tag">Signalétique visuelle</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="signaletique">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="732" src="Images/site/portfolio2/portfolio2-decor-evenementiel-2.jpg" alt="Décor événementiel">
+            <img loading="lazy" width="1200" height="803" src="Images/site/realisations/75-parc-asterix.jpg" alt="Parc Astérix — Enseigne événementielle pour les 20 ans du parc.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Décor événementiel</h3>
-            <p class="desc">Décor de tapis rouge en volume peint.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
+            <h3>Parc Astérix</h3>
+            <p class="desc">Enseigne événementielle pour les 20 ans du parc.</p>
+            <div class="p-tags"><span class="p-tag">Signalétique visuelle</span></div>
           </div>
         </div>
-        <div class="p-card reveal-io" data-cat="decors">
+        <div class="p-card reveal-io" data-cat="signaletique">
           <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-decor-showroom.jpg" alt="Décor showroom">
+            <img loading="lazy" width="1200" height="800" src="Images/site/realisations/76-the-zoute-grand-prix.jpg" alt="The Zoute Grand Prix — Lustre-enseigne événementiel.">
             <div class="cur-fill"></div>
           </div>
           <div class="body">
-            <h3>Décor showroom</h3>
-            <p class="desc">Éléments décoratifs pour un showroom.</p>
-            <div class="p-tags"><span class="p-tag">Décors &amp; Activations Pub</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="enseignes">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="825" src="Images/site/portfolio2/portfolio2-enseigne-commercante.jpg" alt="Enseigne commerçante">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Enseigne commerçante</h3>
-            <p class="desc">Enseigne peinte pour une boucherie-volaillerie.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
-          </div>
-        </div>
-        <div class="p-card reveal-io" data-cat="enseignes">
-          <div class="frame curtain">
-            <img loading="lazy" width="1100" height="732" src="Images/site/portfolio2/portfolio2-decor-vitrine-2.jpg" alt="Décor vitrine">
-            <div class="cur-fill"></div>
-          </div>
-          <div class="body">
-            <h3>Décor vitrine</h3>
-            <p class="desc">Habillage de vitrine en rénovation.</p>
-            <div class="p-tags"><span class="p-tag">Enseignes &amp; Retail</span></div>
+            <h3>The Zoute Grand Prix</h3>
+            <p class="desc">Lustre-enseigne événementiel.</p>
+            <p class="credit">@LaTabledesMatières</p>
+            <div class="p-tags"><span class="p-tag">Signalétique visuelle</span></div>
           </div>
         </div>
     </div>

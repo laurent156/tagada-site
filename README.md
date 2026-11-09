@@ -22,9 +22,9 @@ Le design system est documenté comme skill réutilisable dans `.claude/skills/o
 
 Le sélecteur de langue se trouve dans le menu overlay.
 
-**Accueil** — sections dans l'ordre : hero (photo Audi Q8, légende au survol), barre de confiance (logos partenaires puis marques, liens vers leurs sites), Savoir-faire (`#pourquoi`), Engagements RSE (`#rse`), Réalisations (`#portfolio`, 26 pièces + lien vers la galerie complète ; sur mobile, grille 2 colonnes limitée à 8 pièces après filtre — `PORTFOLIO_MOBILE_LIMIT`), Atelier, FAQ, CTA, Contact.
+**Accueil** — sections dans l'ordre : hero (photo Audi Q8, légende au survol), barre de confiance (logos partenaires puis marques, liens vers leurs sites), Savoir-faire (`#pourquoi`), Engagements RSE (`#rse`), Réalisations (`#portfolio`, sélection de 26 pièces filtrables par type + lien vers la galerie complète ; sur mobile, grille 2 colonnes limitée à 8 pièces après filtre — `PORTFOLIO_MOBILE_LIMIT`), Atelier, FAQ, CTA, Contact.
 
-**Réalisations** — galerie complète de 70 photos clients.
+**Réalisations** — galerie complète de 76 projets, classés selon les 4 types du document de légendes : Enseignes In & Out, PLV, Décors, Signalétique visuelle (mêmes filtres sur l'accueil et mêmes options dans le formulaire). Chaque carte affiche titre, description, crédit (@agence/client) et type.
 
 **Pas de "Conditions générales"** : non nécessaires, le site ne vend rien en ligne. Les Mentions légales, elles, sont obligatoires en Belgique pour tout site professionnel.
 
@@ -35,7 +35,7 @@ index.html, realisations.html, pages légales   # FR à la racine
 en/, nl/                                        # traductions (assets en ../)
 fonts/                                          # Archivo, Inter Tight (.ttf)
 Images/site/                                    # assets utilisés par le site (logos, hero, atelier)
-Images/site/portfolio2/                         # 70 photos de réalisations
+Images/site/realisations/                       # 76 photos de réalisations (NN-titre.jpg, 1200 px max)
 Images/Portfolio/                               # photos sources des clients (non utilisées directement)
 sitemap.xml, robots.txt, site.webmanifest, favicons
 ```
