@@ -49,5 +49,5 @@ jobs:
           lftp --env-password -u "$USER" "sftp://$HOST" -e "
             set sftp:auto-confirm yes;
             set net:max-retries 3;
-            mirror --reverse --parallel=4 --verbose site/ \"$DIR/\";
+            mirror --reverse --parallel=4 --verbose site/ $DIR/;
             bye"

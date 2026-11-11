@@ -26,14 +26,14 @@ jobs:
         run: |
           lftp --env-password -u "$USER" "sftp://$HOST" -e "
             set sftp:auto-confirm yes;
-            cd \"$REMOTE\"; pwd; cls -la; cls -la */; cls -la */*/ | head -n 120;
+            cd $REMOTE; pwd; cls -la; cls -la */; cls -la */*/ | head -n 120;
             bye" | grep -v -E '/(Images|images)/.+\.(jpe?g|png|gif)$'
 
       - name: Download everything
         run: |
           lftp --env-password -u "$USER" "sftp://$HOST" -e "
             set sftp:auto-confirm yes;
-            mirror --parallel=4 \"$REMOTE/\" backup/;
+            mirror --parallel=4 $REMOTE/ backup/;
             bye"
           du -sh backup
 
