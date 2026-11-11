@@ -1,8 +1,8 @@
 # Deploys the site to one.com (tagada.be) over SFTP on every push to main.
 # Needs repository secrets (Settings → Secrets and variables → Actions):
 #   ONECOM_SFTP_HOST, ONECOM_SFTP_USER, ONECOM_SFTP_PASSWORD
-#   ONECOM_SFTP_DIR (optional, remote web root; defaults to the login folder)
-# Until the secrets exist the job is skipped, so pushes keep working.
+#   ONECOM_SFTP_DIR (remote web root, e.g. webroots/<id>; one.com logs in one level above it)
+# Until all four secrets exist the job is skipped, so pushes keep working.
 name: Deploy to one.com
 
 on:
@@ -27,7 +27,7 @@ jobs:
       - name: Skip until the SFTP secrets are configured
         id: check
         run: |
-          if [ -z "$HOST" ] || [ -z "$USER" ] || [ -z "$PASS" ]; then
+          if [ -z "$HOST" ] || [ -z "$USER" ] || [ -z "$PASS" ] || [ -z "$DIR" ]; then
             echo "SFTP secrets missing: nothing deployed."
             echo "ready=false" >> "$GITHUB_OUTPUT"
           else
@@ -49,5 +49,5 @@ jobs:
           lftp --env-password -u "$USER" "sftp://$HOST" -e "
             set sftp:auto-confirm yes;
             set net:max-retries 3;
-            mirror --reverse --parallel=4 --verbose site/ ${DIR:-.};
+            mirror --reverse --parallel=4 --verbose site/ \"$DIR/\";
             bye"
