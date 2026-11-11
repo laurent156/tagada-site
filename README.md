@@ -53,18 +53,13 @@ Toutes les URL absolues (canonical, hreflang, OG, JSON-LD, sitemap, `robots.txt`
 
 ## Cookies & Google Analytics
 
-Un bandeau de consentement (accepter/refuser) est présent sur toutes les pages, avec le choix mémorisé dans `localStorage` (`tagada_consent`). Tant que Google Analytics n'a pas d'ID, le bandeau s'affiche et fonctionne mais ne charge aucun script.
+Un bandeau de consentement (accepter/refuser) est présent sur toutes les pages, avec le choix mémorisé dans `localStorage` (`tagada_consent`). Google Analytics 4 (propriété tagada.be, ID `G-HF92ERQL9P`, variable `GA_MEASUREMENT_ID` dans chaque page) ne se charge qu'après acceptation (exigence RGPD/ePrivacy).
 
-**Pour brancher Google Analytics** : dans chaque page HTML (FR, EN, NL), chercher la ligne
-```js
-var GA_MEASUREMENT_ID = ''; // TODO : coller l'ID Google Analytics (format G-XXXXXXXXXX) une fois le compte créé
-```
-et y coller l'ID de mesure. Le script ne se charge qu'après acceptation du bandeau (exigence RGPD/ePrivacy). Google Search Console ne dépose pas de cookies : seule la vérification de propriété est à ajouter (balise meta ou fichier à la racine).
+Événements suivis en plus des pages vues : `generate_lead` (formulaire de contact envoyé), `clic_telephone`, `clic_email` (fonction `tagadaTrack`). Penser à passer la conservation des données à 14 mois dans GA (Admin → Collecte et conservation des données → Conservation des données) et à marquer `generate_lead` comme événement clé.
 
 ## Reste à faire avant mise en production
 
 - **Showreel** : le panneau vidéo du hero référence `showreel-tagada.mp4`, absent du repo — à ajouter (l'image `hero-video-panel.jpg` sert de poster en attendant).
-- **Google Analytics** : ID de mesure à renseigner (voir ci-dessus).
 - **Réseaux sociaux** : les liens Facebook / Instagram / LinkedIn du footer sont masqués (commentés dans le HTML de chaque page) en attendant les vraies URL.
 - **Galerie EN/NL** : `realisations.html` n'existe qu'en français ; sur mobile, les accueils EN/NL ont à la place un bouton « Show all / Toon alle » qui déplie les 20 pièces.
 - **Textes** : les sections Savoir-faire / Atelier et les réponses de la FAQ sont une proposition éditoriale, à valider avec l'équipe Tagada.

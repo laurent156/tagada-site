@@ -509,7 +509,7 @@ document.querySelectorAll('.accordion2').forEach(function(item, i){
 })();
 
 /* ---------- Cookie consent + Google Analytics gating ---------- */
-var GA_MEASUREMENT_ID = ''; // TODO : coller l'ID Google Analytics (format G-XXXXXXXXXX) une fois le compte cree
+var GA_MEASUREMENT_ID = 'G-HF92ERQL9P'; // Google Analytics 4, propriete tagada.be
 
 function tagadaLoadAnalytics(){
   if (!GA_MEASUREMENT_ID) return;
@@ -522,6 +522,16 @@ function tagadaLoadAnalytics(){
   gtag('js', new Date());
   gtag('config', GA_MEASUREMENT_ID, { anonymize_ip: true });
 }
+
+/* Sends a GA4 event only when analytics is loaded, i.e. after cookie consent. */
+function tagadaTrack(name, params){
+  if (window.gtag) gtag('event', name, params || {});
+}
+document.addEventListener('click', function(e){
+  var link = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+  if (!link) return;
+  tagadaTrack(link.href.indexOf('tel:') === 0 ? 'clic_telephone' : 'clic_email', { link_url: link.href });
+});
 
 function tagadaSetConsent(accepted){
   localStorage.setItem('tagada_consent', accepted ? 'accepted' : 'rejected');
