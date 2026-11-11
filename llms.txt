@@ -34,8 +34,8 @@ Site disponible en français (principal), anglais et néerlandais.
 
 ## Pages
 
-- [Accueil (FR)](https://laurent156.github.io/tagada-site/) : savoir-faire, engagements, réalisations, atelier, FAQ, contact
-- [Toutes les réalisations](https://laurent156.github.io/tagada-site/realisations.html) : 76 projets classés par type, avec client ou agence
-- [Home (EN)](https://laurent156.github.io/tagada-site/en/)
-- [Home (NL)](https://laurent156.github.io/tagada-site/nl/)
-- [Mentions légales](https://laurent156.github.io/tagada-site/mentions-legales.html)
+- [Accueil (FR)](https://tagada.be/) : savoir-faire, engagements, réalisations, atelier, FAQ, contact
+- [Toutes les réalisations](https://tagada.be/realisations.html) : 76 projets classés par type, avec client ou agence
+- [Home (EN)](https://tagada.be/en/)
+- [Home (NL)](https://tagada.be/nl/)
+- [Mentions légales](https://tagada.be/mentions-legales.html)

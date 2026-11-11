@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://laurent156.github.io/tagada-site/sitemap.xml
+Sitemap: https://tagada.be/sitemap.xml
