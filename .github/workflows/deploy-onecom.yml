@@ -1,0 +1,53 @@
+# Deploys the site to one.com (tagada.be) over SFTP on every push to main.
+# Needs repository secrets (Settings → Secrets and variables → Actions):
+#   ONECOM_SFTP_HOST, ONECOM_SFTP_USER, ONECOM_SFTP_PASSWORD
+#   ONECOM_SFTP_DIR (optional, remote web root; defaults to the login folder)
+# Until the secrets exist the job is skipped, so pushes keep working.
+name: Deploy to one.com
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-onecom
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      HOST: ${{ secrets.ONECOM_SFTP_HOST }}
+      USER: ${{ secrets.ONECOM_SFTP_USER }}
+      PASS: ${{ secrets.ONECOM_SFTP_PASSWORD }}
+      DIR: ${{ secrets.ONECOM_SFTP_DIR }}
+    steps:
+      - name: Skip until the SFTP secrets are configured
+        id: check
+        run: |
+          if [ -z "$HOST" ] || [ -z "$USER" ] || [ -z "$PASS" ]; then
+            echo "SFTP secrets missing: nothing deployed."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.check.outputs.ready == 'true'
+
+      - name: Collect the site files
+        if: steps.check.outputs.ready == 'true'
+        run: python3 scripts/build-deploy.py site
+
+      - name: Upload over SFTP
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          export LFTP_PASSWORD="$PASS"
+          lftp --env-password -u "$USER" "sftp://$HOST" -e "
+            set sftp:auto-confirm yes;
+            set net:max-retries 3;
+            mirror --reverse --parallel=4 --verbose site/ ${DIR:-.};
+            bye"

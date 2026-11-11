@@ -89,9 +89,9 @@ section{ padding:112px 0; }
 
 /* ---------- Navbar ---------- */
 .navbar{ position:fixed; top:0; left:0; right:0; z-index:500; background:var(--bg); border-bottom:1px solid var(--line); transition:border-color .3s; }
-.navbar-inner{ max-width:1280px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between; }
+.navbar-inner{ max-width:1280px; margin:0 auto; padding:16px 40px; display:flex; align-items:center; justify-content:space-between; }
 .brand{ display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:500; font-size:20px; letter-spacing:-.02em; }
-.brand .mark{ width:auto; height:40px; object-fit:contain; display:block; }
+.brand .mark{ width:auto; height:56px; object-fit:contain; display:block; }
 .nav-actions{ display:flex; align-items:center; gap:24px; }
 .menu-trigger{ display:flex; align-items:center; gap:10px; background:none; border:none; cursor:pointer; font-family:var(--font-display); font-weight:500; font-size:15px; color:var(--ink); padding:0; }
 .menu-trigger .bars{ width:22px; height:14px; position:relative; }
@@ -287,6 +287,8 @@ body.menu-open{ overflow:hidden; }
 .footer-col a:hover{ color:var(--accent-deep); }
 .footer-col a.social-link{ display:flex; align-items:center; gap:12px; }
 .social-link .ic{ width:18px; height:18px; flex-shrink:0; }
+.footer-brand{ display:inline-block; }
+.footer-brand img{ height:72px; width:auto; display:block; }
 .footer-credits{ margin-top:40px; padding-top:24px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; font-size:13px; color:var(--ink-60); }
 .footer-legal{ display:flex; gap:24px; }
 @media (max-width:900px){ .footer-cols{ gap:40px; } }
@@ -399,7 +401,7 @@ body.menu-open{ overflow:hidden; }
     <p>Vos données ne sont jamais vendues. Elles peuvent être transmises à :</p>
     <ul>
       <li><strong>Google LLC</strong> (Google Analytics), dans le cadre du Data Privacy Framework UE-États-Unis, uniquement si vous avez accepté les cookies de mesure d'audience.</li>
-      <li><strong>GitHub, Inc.</strong>, notre hébergeur, pour les besoins techniques d'hébergement du site.</li>
+      <li><strong>one.com</strong> (Danemark), notre hébergeur, qui héberge le site et achemine les messages du formulaire de contact.</li>
     </ul>
 
     <h2>Vos droits</h2>
@@ -435,6 +437,7 @@ body.menu-open{ overflow:hidden; }
       </div>
     </div>
     -->
+    <a class="footer-brand" href="index.html" aria-label="Tagada"><img loading="lazy" src="Images/site/logo-tagada-red.png" alt="Tagada"></a>
     <div class="footer-credits">
       <span>© 2026 Tagada. Conçu et fabriqué à Bruxelles.</span>
       <div class="footer-legal"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cookies.html">Cookies</a></div>
